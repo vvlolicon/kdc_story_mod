@@ -1,0 +1,30 @@
+tr_nanomachanic = {
+	tree_template = "tree_21_21"
+	adoption_bonus = "tr_nanomachanic_adopt"
+	finish_bonus = "tr_nanomachanic_finish"
+
+	traditions = {
+		"tr_nanomachanic_1"
+		"tr_nanomachanic_2"
+		"tr_nanomachanic_3"
+		"tr_nanomachanic_4"
+		"tr_nanomachanic_5"
+	}
+
+	potential = {
+		is_gestalt = no
+		NOR = {
+			has_origin = origin_shroudwalker_apprentice
+			has_ascension_perk = ap_engineered_evolution
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_ascension_perk = ap_organo_machine_interfacing
+			has_ascension_perk = ap_mind_over_matter
+			has_ascension_perk = ap_synthetic_evolution
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+
+}

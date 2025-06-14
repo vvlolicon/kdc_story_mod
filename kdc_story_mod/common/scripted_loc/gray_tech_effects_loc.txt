@@ -1,0 +1,342 @@
+defined_text = {
+	name = GetGrayTechEffect
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1000 }}
+		localization_key = tech_TMR_nanite_productor_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1010 }}
+		localization_key = tech_building_nanoassembly_plant_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1011 }}
+		localization_key = tech_nanoassembly_technology_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1013 }}
+		localization_key = tech_nano_reconstruct_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1014 }}
+		localization_key = tech_building_nanite_field_manipulator_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1015 }}
+		localization_key = tech_repeat_nanite_produce_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1016 }}
+		localization_key = tech_building_gray_nanite_factory_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1017 }}
+		localization_key = tech_building_gray_nanite_factory2_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1020 }}
+		localization_key = tech_building_gray_nano_foundry_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1021 }}
+		localization_key = tech_building_gray_nano_rare_resource_factory_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1022 }}
+		localization_key = tech_building_gray_nano_foundry2_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1024 }}
+		localization_key = tech_nano_job_foundry_upgrade_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1025 }}
+		localization_key = tech_repeat_nano_alloy_produce_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1030 }}
+		localization_key = tech_building_gray_nano_factory_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1031 }}
+		localization_key = tech_building_gray_nano_factory2_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1034 }}
+		localization_key = tech_nano_job_artisan_upgrade_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1035 }}
+		localization_key = tech_repeat_nano_consumer_goods_produce_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1040 }}
+		localization_key = tech_building_gray_nano_research_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1041 }}
+		localization_key = tech_building_gray_nano_research2_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1042 }}
+		localization_key = tech_building_gray_nano_research3_effect
+	}
+	text = {
+		trigger = { OR = {
+			check_variable = { which = gray_tech_id value = 1043 }
+			check_variable = { which = gray_tech_id value = 1044 }
+		}}
+		localization_key = tech_nano_research_slot_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1045 }}
+		localization_key = tech_repeat_nano_research_produce_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1060 }}
+		localization_key = tech_nano_construction_core_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1061 }}
+		localization_key = tech_nano_dyson_sphere_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1062 }}
+		localization_key = tech_nano_matter_decompressor_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1063 }}
+		localization_key = tech_nano_ring_world_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1064 }}
+		localization_key = tech_nano_science_nexus_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1070 }}
+		localization_key = tech_macro_nanorobot_technology_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1071 }}
+		localization_key = tech_TMR_nanite_factory_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1072 }}
+		localization_key = tech_TMR_gatebuilder_core_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1073 }}
+		localization_key = tech_R_gateway_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2000 }}
+		localization_key = tech_gray_nano_reactor_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2001 }}
+		localization_key = tech_gray_nanite_ia_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2002 }}
+		localization_key = tech_gray_weapon_p_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2003 }}
+		localization_key = tech_gray_weapon_g_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2004 }}
+		localization_key = tech_gray_weapon_h_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2011 }}
+		localization_key = tech_gray_nano_propulsion_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2012 }}
+		localization_key = tech_gray_nano_jump_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2013 }}
+		localization_key = tech_gray_nano_sensors_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2014 }}
+		localization_key = tech_gray_nano_computer_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2015 }}
+		localization_key = tech_gray_nano_armor_hardener_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2016 }}
+		localization_key = tech_gray_nano_shield_recharger_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2021 }}
+		localization_key = tech_planet_killer_graygoo_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2022 }}
+		localization_key = tech_gray_nano_aura_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2031 }}
+		localization_key = TECH_NANITECROP_TITAN_TITLE
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2032 }}
+		localization_key = TECH_NANITECROP_MOTHERSHIP_TITLE
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2033 }}
+		localization_key = TECH_NANITECROP_STORM_TITLE
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2034 }}
+		localization_key = TECH_NANITECROP_SENTRY_TITLE
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2040 }}
+		localization_key = tech_gray_weapon_SML_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2041 }}
+		localization_key = tech_gray_weapon_l_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2042 }}
+		localization_key = tech_gray_weapon_x_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2043 }}
+		localization_key = tech_gray_weapon_t_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2044 }}
+		localization_key = tech_nanite_sentry_maingun_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2051 }}
+		localization_key = tech_gray_weapon_el_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2052 }}
+		localization_key = tech_gray_weapon_ex_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2053 }}
+		localization_key = tech_gray_weapon_et_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 2054 }}
+		localization_key = tech_repeat_nanoweapon_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3000 }}
+		localization_key = tech_psionic_theory_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3010 }}
+		localization_key = tech_modularized_memory_injection_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3011 }}
+		localization_key = tech_modularized_skill_injection_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3012 }}
+		localization_key = tech_nano_cloning_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3013 }}
+		localization_key = tech_repeat_consciousness_copy_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3014 }}
+		localization_key = tech_repeat_consciousness_sycn_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3020 }}
+		localization_key = tech_consciousness_detach_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3021 }}
+		localization_key = tech_consciousness_backup_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3022 }}
+		localization_key = tech_consciousness_create_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3023 }}
+		localization_key = tech_virtual_conscious_network_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3024 }}
+		localization_key = tech_repeat_nano_gestalt_network_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3030 }}
+		localization_key = tech_building_nanite_bureaucratic_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3031 }}
+		localization_key = tech_building_nanite_bureaucratic_2_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3032 }}
+		localization_key = tech_building_nanite_bureaucratic_3_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3040 }}
+		localization_key = tech_remote_nano_swarm_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3041 }}
+		localization_key = tech_nano_bureaucrat_upgrade_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3042 }}
+		localization_key = tech_repeat_large_scale_network_manage_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3050 }}
+		localization_key = tech_nano_exoskeletons_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3051 }}
+		localization_key = tech_nano_biomechanics_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3052 }}
+		localization_key = tech_living_nano_construction_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3053 }}
+		localization_key = tech_repeat_nano_biostructure_enhance_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3060 }}
+		localization_key = tech_nano_drones_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3061 }}
+		localization_key = tech_nano_army_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3062 }}
+		localization_key = tech_army_gray_mecha_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3070 }}
+		localization_key = tech_building_gray_nano_defence_centre_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3071 }}
+		localization_key = tech_building_gray_fortress_effect
+	}
+	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 3072 }}
+		localization_key = tech_building_gray_fortress2_effect
+	}
+}

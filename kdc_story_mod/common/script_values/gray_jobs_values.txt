@@ -1,0 +1,33 @@
+# use on pop scope
+gray_job_nano_research_points_mult = {
+    base = 1
+    mult = value:gray_job_nano_research_points_policy_mult
+    mult = value:gray_job_nano_research_points_buff_mult
+}
+
+# do not use this directly
+gray_job_nano_research_points_policy_mult = {
+    base = 1
+    modifier = {
+        exists = owner
+        owner = {
+            has_policy_flag = gray_research_less_nano_points
+        }
+        subtract = 0.5
+    }
+    modifier = {
+        exists = owner
+        owner = {
+            has_policy_flag = gray_research_more_nano_points
+        }
+        add = 0.5
+    }
+}
+
+# do not use this directly
+gray_job_nano_research_points_buff_mult = {
+    base = 1
+    add = owner.nanotech_points_per_pop_mult
+    add = modifier:pop_jobs_nano_research_points_mult
+    add = owner.modifier:country_jobs_nano_research_points_mult
+}

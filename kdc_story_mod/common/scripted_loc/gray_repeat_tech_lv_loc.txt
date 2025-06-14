@@ -1,0 +1,86 @@
+defined_text = {
+    name = GetGrayTech1011Lv
+    text = {
+        trigger = { check_variable = { which = nano_assembly_technology value <= 0 }}
+        localization_key = roman_1
+    }
+    text = {
+        trigger = { check_variable = { which = nano_assembly_technology value = 1 }}
+        localization_key = roman_2
+    }
+    text = {
+        trigger = { check_variable = { which = nano_assembly_technology value >= 2 }}
+        localization_key = roman_3
+    }
+}
+defined_text = {
+    name = GetGrayTech1024Lv
+    text = {
+        trigger = { check_variable = { which = tech_nano_job_foundry_upgrade value <= 0 }}
+        localization_key = roman_1
+    }
+    text = {
+        trigger = { check_variable = { which = tech_nano_job_foundry_upgrade value = 1 }}
+        localization_key = roman_2
+    }
+    text = {
+        trigger = { check_variable = { which = tech_nano_job_foundry_upgrade value >= 2 }}
+        localization_key = roman_3
+    }
+}
+defined_text = {
+    name = GetGrayTech1034Lv
+    text = {
+        trigger = { check_variable = { which = tech_nano_job_artisan_upgrade value <= 0 }}
+        localization_key = roman_1
+    }
+    text = {
+        trigger = { check_variable = { which = tech_nano_job_artisan_upgrade value = 1 }}
+        localization_key = roman_2
+    }
+    text = {
+        trigger = { check_variable = { which = tech_nano_job_artisan_upgrade value >= 2 }}
+        localization_key = roman_3
+    }
+}
+defined_text = {
+    name = GetGrayTech1043Lv
+    text = {
+        trigger = { check_variable = { which = num_gray_research_slot value <= 1 }}
+        localization_key = roman_1
+    }
+    text = {
+        trigger = { check_variable = { which = num_gray_research_slot value >= 2 }}
+        localization_key = roman_2
+    }
+}
+defined_text = {
+    name = GetGrayTech3010Lv
+    text = {
+        trigger = { check_variable = { which = tech_modularized_memory_injection value <= 0 }}
+        localization_key = roman_1
+    }
+    text = {
+        trigger = { check_variable = { which = tech_modularized_memory_injection value = 1 }}
+        localization_key = roman_2
+    }
+    text = {
+        trigger = { check_variable = { which = tech_modularized_memory_injection value >= 2 }}
+        localization_key = roman_3
+    }
+}
+defined_text = {
+    name = GetGrayTech3041Lv
+    text = {
+        trigger = { check_variable = { which = tech_nano_bureaucrat_upgrade value <= 0 }}
+        localization_key = roman_1
+    }
+    text = {
+        trigger = { check_variable = { which = tech_nano_bureaucrat_upgrade value = 1 }}
+        localization_key = roman_2
+    }
+    text = {
+        trigger = { check_variable = { which = tech_nano_bureaucrat_upgrade value >= 2 }}
+        localization_key = roman_3
+    }
+}

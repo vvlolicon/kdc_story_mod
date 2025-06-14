@@ -1,0 +1,13 @@
+*.vsconfig
+*.sln
+*.csproj
+/.vs
+/.idea
+/kdc_story_mod/!!!ABANDONED file backup
+*.fbx
+*.png
+*.jpg
+*.mat
+*.dds
+*.asset
+*.mesh
