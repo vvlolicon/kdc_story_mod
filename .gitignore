@@ -3,6 +3,7 @@
 *.csproj
 /.vs
 /.idea
+/kdc_story_mod/.idea
 /kdc_story_mod/!!!ABANDONED file backup
 *.fbx
 *.png
