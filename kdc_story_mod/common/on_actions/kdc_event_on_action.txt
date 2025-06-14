@@ -23,18 +23,6 @@ on_tech_increased = {
 	}
 }
 
-on_yearly_pulse = {
-	events = {
-		# PR_job_mod_KDC.2
-	}
-}
-
-on_yearly_pulse_country = {
-	events = {
-		# gray_origin.27
-	}
-}
-
 # Triggers event when ship enters a system
 # Scope = Ship
 # From = System
@@ -79,18 +67,18 @@ on_planet_surveyed = {
 	}
 }
 
-# No scope, like on_game_start
-on_monthly_pulse = {
-	events = {
-		# gray_origin.999
-	}
-	# random_events = {
-	# 	1 = kdc_event.3
-	# 	3 = 0
-	# }
-}
+# # No scope, like on_game_start
+# VOP_on_monthly_pulse = {
+# 	events = {
+# 		# gray_origin.999
+# 	}
+# 	# random_events = {
+# 	# 	1 = kdc_event.3
+# 	# 	3 = 0
+# 	# }
+# }
 
-on_monthly_pulse_country = {
+VOP_on_monthly_pulse_country = {
 	events = {
 		gray_tech.1
 		gray_origin.204
@@ -104,7 +92,6 @@ on_monthly_pulse_country = {
 # FromFromFrom = fleet 2
 on_entering_battle = {
 	events = {
-		mwsge_drone.1
 	}
 }
 
@@ -209,8 +196,6 @@ on_single_player_save_game_load = {
 		gray_origin.201
 		gray_origin.301
 		gray_tech.99
-
-		# PR_job_mod_KDC.2
 	}
 }
 

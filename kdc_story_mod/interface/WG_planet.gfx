@@ -76,4 +76,21 @@ spriteTypes = {
 		sprite_sheet_sprite_type = "GFX_wg_planet_type"
 		default_frame = 10
 	}
+
+	spriteType = {
+		name = "GFX_district_arcology_graygoo_housing_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_arcology_graygoo_rural_1_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_arcology_housing_secondary_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_arcology_graygoo_rural_2_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_arcology_housing_secondary_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_arcology_graygoo_rural_3_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_arcology_housing_secondary_bg.dds"
+	}
 }

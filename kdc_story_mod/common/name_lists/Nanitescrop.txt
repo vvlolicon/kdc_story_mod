@@ -2,7 +2,7 @@
 
 Nanitecrop = {
 
-	language = "l_simp_chinese"
+	#language = "l_simp_chinese"
 	category = "Nanites"
 
 	ship_names = {
@@ -59,35 +59,35 @@ Nanitecrop = {
 		random_names = {
             "纳米风暴"
 		}
-		sequential_name = "%O% 纳米集群"
+		sequential_name = "nanite_fleet_name"
 	}
 	
 	army_names = {
 
 		machine_defense = {
-			sequential_name = "%O% 纳米集群"
+			sequential_name = "nanite_fleet_name"
 		}
 		
 		machine_assault_1 = {
-			sequential_name = "%O% 纳米集群"
+			sequential_name = "nanite_fleet_name"
 		}
 		
 		machine_assault_2 = {
-			sequential_name = "%O% 纳米集群"
+			sequential_name = "nanite_fleet_name"
 		}
 		
 		machine_assault_3 = {
-			sequential_name = "%O% 纳米集群"
+			sequential_name = "nanite_fleet_name"
 		}
 
 		defense_army = {
-			sequential_name = "%O% 纳米集群"
+			sequential_name = "nanite_fleet_name"
 		}
 		gatebuilder_grey_army = {
-			sequential_name = "%O% 纳米集群"
+			sequential_name = "nanite_fleet_name"
 		}
 		assault_army = {
-			sequential_name = "%O% 纳米集群"
+			sequential_name = "nanite_fleet_name"
 		}
 	}
 	planet_names = {

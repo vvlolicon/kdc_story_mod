@@ -13,4 +13,16 @@
 NANITES_CROP = {
 	species_trait_points = 15
 	species_max_traits = 8
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				exists = planet
+				planet = { has_modifier = astralnomical_interest_modifier }
+				is_enslaved = no
+			}
+			physics_research = 1
+		}
+	}
+	inherit_traits_from = { STARSHIPGIRLS }
 }

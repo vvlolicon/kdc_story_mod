@@ -1,21 +1,3 @@
-is_organic_species = {
-	species = {
-		OR = {
-			is_archetype = BIOLOGICAL # original trigger did not include pre-sapient classes
-			is_archetype = WARSHIPGIRL
-			is_archetype = SHENHAI
-			is_archetype = LITHOID
-			is_archetype = STARSHIPGIRLS
-			is_archetype = Dolls
-			is_archetype = KANMUSU
-			is_archetype = DATEALIVE
-			is_archetype = UNITED_FLEET
-			is_archetype = NANITES_CROP
-			is_archetype = NYTO
-		}
-	}
-}
-
 is_special_modding_archetype = {
 	OR = {
 		is_archetype = WARSHIPGIRL

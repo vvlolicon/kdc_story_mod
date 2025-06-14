@@ -231,7 +231,7 @@ country_event = {
 			}
 			every_system_planet = {
 				if = {
-					limit = { is_ringworld_wg = yes }
+					limit = { is_ringworld = yes }
 					spawn_ringworld_cracker_effect = yes
 					change_pc = pc_ringworld_habitable_damaged
 				}
@@ -718,7 +718,7 @@ planet_event = {
 		
 		if = {
 			limit = { OR = {
-				is_ringworld_wg = yes
+				is_ringworld = yes
 				is_habitat_wg = yes
 			}}
 			spawn_habitat_cracker_effect = yes
