@@ -5,6 +5,6 @@ tags={
 	"Ships"
 	"Megastructure"
 }
-supported_version="4.0.19"
+supported_version="v4.0.20"
 path="D:/Users/johnsonlei/Documents/Paradox Interactive/Stellaris/mod/kdc_story_mod/kdc_story_mod"
 remote_file_id="2737603165"
