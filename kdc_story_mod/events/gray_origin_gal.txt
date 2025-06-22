@@ -1169,7 +1169,7 @@ country_event = {
 	desc = {
 		exclusive_trigger = {
 			OR = {
-				is_gestalt = no
+				is_gestalt = yes
 				has_authority = auth_shenhai
 			}
 			NOT = { has_country_flag = gray_storyline_control }
@@ -1203,7 +1203,7 @@ country_event = {
 		name = gray_gal.44.a
 		trigger = {
 			OR = {
-				is_gestalt = no
+				is_gestalt = yes
 				has_authority = auth_shenhai
 			}
 			NOT = { has_country_flag = refuse_storyline_talk_to_gray}

@@ -680,6 +680,7 @@ gray_tech_3011_prerequisites_trigger = {
         text = soon
         always = no
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3011_trigger = {
     # has_country_flag = gray_tech_3011_researched
@@ -698,6 +699,7 @@ gray_tech_3012_prerequisites_trigger = {
         text = soon
         always = no
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3012_trigger = {
     # has_country_flag = gray_tech_3012_researched
@@ -708,6 +710,7 @@ gray_tech_3013_prerequisites_trigger = {
         text = soon
         always = no
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3013_trigger = {
     # has_country_flag = gray_tech_3013_researched
@@ -717,6 +720,7 @@ gray_tech_3014_prerequisites_trigger = {
         text = soon
         always = no
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3014_trigger = {
     # has_country_flag = gray_tech_3013_researched
@@ -744,6 +748,7 @@ gray_tech_3022_prerequisites_trigger = {
         text = require_gray_tech_3021
         has_country_flag = gray_tech_3021_researched
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3022_trigger = {
     has_country_flag = gray_tech_3022_researched
@@ -753,6 +758,7 @@ gray_tech_3023_prerequisites_trigger = {
         text = require_gray_tech_3022
         has_country_flag = gray_tech_3022_researched
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3023_trigger = {
     has_country_flag = gray_tech_3023_researched
@@ -762,6 +768,7 @@ gray_tech_3024_prerequisites_trigger = {
         text = require_gray_tech_3023
         has_country_flag = gray_tech_3023_researched
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3024_trigger = {
     has_country_flag = tech_repeat_nano_gestalt_network_finish
@@ -793,6 +800,7 @@ gray_tech_3031_prerequisites_trigger = {
     #     text = require_tech_capital_productivity_2
         has_technology = tech_capital_productivity_2
     # }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3031_trigger = {
     check_variable = { which = tech_building_nanite_bureaucratic value > 1 }
@@ -810,6 +818,7 @@ gray_tech_3032_prerequisites_trigger = {
     #     text = require_tech_capital_productivity_3
         has_technology = tech_capital_productivity_3
     # }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3032_trigger = {
     check_variable = { which = tech_building_nanite_bureaucratic value > 2 }
@@ -832,6 +841,7 @@ gray_tech_3041_prerequisites_trigger = {
         text = require_gray_tech_3040
         has_country_flag = gray_tech_3040_researched
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3041_trigger = {
     check_variable = { which = tech_nano_bureaucrat_upgrade value >= 3 }
@@ -845,6 +855,7 @@ gray_tech_3042_prerequisites_trigger = {
         text = require_gray_tech_3032
         check_variable = { which = tech_building_nanite_bureaucratic value > 2 }
     }
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3042_trigger = {
     # 循环科技，没有最大等级
@@ -878,12 +889,14 @@ has_gray_tech_3051_trigger = {
 }
 gray_tech_3052_prerequisites_trigger = {
     has_technology = tech_nano_biomechanics
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3052_trigger = {
     has_technology = tech_living_nano_construction
 }
 gray_tech_3053_prerequisites_trigger = {
     has_technology = tech_living_nano_construction
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3053_trigger = {
     # 循环科技，没有最大等级
@@ -912,6 +925,7 @@ gray_tech_3062_prerequisites_trigger = {
         has_country_flag = gray_owner
     }
     has_technology = tech_nano_army
+    has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3062_trigger = {
     has_technology = tech_army_gray_mecha

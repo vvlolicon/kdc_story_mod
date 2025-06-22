@@ -1336,6 +1336,7 @@ planet_event = {
 					country_event = { id = gray_origin.46 days = 360 }
 				}
 			}
+			country_event = { id = graygoo.499 }
 		}
 	}
 
@@ -3514,65 +3515,55 @@ country_event = {
 		end_event_chain = gray_ascension_upgrade_chain
 		# 产业革命兼容（人口特质维护费）
 		# country_event = { id = PR_job_mod_KDC.3 days = 1 }
+		if = { #完成义体化进程
+			limit = {
+				if = { # dlc有局势
+					limit = { has_machine_age_dlc = yes }
+					has_country_flag = situation_cyberization_complete
+				} else = {
+					owner_main_species = { has_trait = trait_cybernetic }
+				}
+			}
+			set_timed_country_flag = { flag = has_trait_cybernetic days = 999 }
+		}
+
+		if = { # 灵能飞升 - 完整觉醒特质
+			limit = { has_tradition = tr_psionics_psionic_assimilation }
+			set_timed_country_flag = { flag = has_trait_psionic days = 999 }
+		}
+		else_if = { # 灵能飞升 - 灵能潜质特质
+			limit = { has_tradition = tr_psionics_adopt }
+			set_timed_country_flag = { flag = has_trait_latent_psionic days = 999 }
+		}
+
+		if = {
+			limit = { owner_main_species = { has_trait = trait_dragon_lineage }}
+			set_timed_country_flag = { flag = has_trait_dragon_lineage days = 1 }
+		}
+		if = {
+			limit = { owner_main_species = { has_trait = trait_dimension_life }}
+			set_timed_country_flag = { flag = has_trait_dimension_life days = 1 }
+		}
+
 		if = {
 			# 如果种族是原版物种，则转白毛，否则只加特质
 			limit = { owner_main_species = {
 				is_vanilla_species_class = yes
 			}}
-			if = { 
-				limit = { root = { owner_main_species = { has_trait = trait_dragon_lineage }}}
-				create_species = {
-					name = this
-					namelist = this
-					plural = this
-					# is_mod = yes
-					class = "NANITESCROP"
-					portrait = "Nanitescrop"
-					immortal = yes
-					homeworld = root.capital_scope
-					traits = {
-						trait = "gray_trait_species_gray"
-						trait = "trait_dragon_lineage"
-					}
-					effect = {
-						save_event_target_as = gray_species
-					}
+			create_species = {
+				name = this
+				namelist = this
+				plural = this
+				# is_mod = yes
+				class = "NANITESCROP"
+				portrait = "Nanitescrop"
+				immortal = yes
+				homeworld = root.capital_scope
+				traits = {
+					trait = "gray_trait_species_gray"
 				}
-			} else_if = {
-				limit = { root = { owner_main_species = { has_trait = trait_dimension_life }}}
-				create_species = {
-					name = this
-					namelist = this
-					plural = this
-					# is_mod = yes
-					class = "NANITESCROP"
-					portrait = "Nanitescrop"
-					immortal = yes
-					homeworld = root.capital_scope
-					traits = {
-						trait = "gray_trait_species_gray"
-						trait = "trait_dimension_life"
-					}
-					effect = {
-						save_event_target_as = gray_species
-					}
-				}
-			} else = {
-				create_species = {
-					name = this
-					namelist = this
-					plural = this
-					# is_mod = yes
-					class = "NANITESCROP"
-					portrait = "Nanitescrop"
-					immortal = yes
-					homeworld = root.capital_scope
-					traits = {
-						trait = "gray_trait_species_gray"
-					}
-					effect = {
-						save_event_target_as = gray_species
-					}
+				effect = {
+					save_event_target_as = gray_species
 				}
 			}
 			every_owned_pop_group = {
@@ -3637,6 +3628,7 @@ country_event = {
 		# 	modifier = modifier_ban_assemble
 		# 	days = 32
 		# }
+		country_event = { id = gray_origin.1005 }
 	}
 
 	option = {
@@ -3702,6 +3694,61 @@ country_event = {
 				set_gray_portrait = yes
 			}
 		}
+	}
+}
+
+country_event = {
+	id = gray_origin.1005
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_owned_pop_group = {
+			limit = { is_same_species = root.owner_main_species }
+			root = { switch = {
+				trigger = has_country_flag
+				has_trait_cybernetic = {
+					prev = { modify_species = {
+						species = this
+						add_trait = trait_cybernetic
+						effect = { save_event_target_as = gray_species }
+					}}
+				}
+				has_trait_psionic = {
+					prev = { modify_species = {
+						species = this
+						add_trait = trait_psionic
+						effect = { save_event_target_as = gray_species }
+					}}
+				}
+				has_trait_latent_psionic = {
+					prev = { modify_species = {
+						species = this
+						add_trait = trait_latent_psionic
+						effect = { save_event_target_as = gray_species }
+					}}
+				}
+			}}
+			if = {
+				limit = { root = { has_country_flag = has_trait_dragon_lineage }}
+				modify_species = {
+					species = this
+					add_trait = trait_dragon_lineage
+					add_traits_at_start_of_list = yes
+					effect = { save_event_target_as = gray_species }
+				}
+			}
+			else_if = {
+				limit = { root = { has_country_flag = has_trait_dimension_life }}
+				modify_species = {
+					species = this
+					add_trait = trait_dimension_life
+					add_traits_at_start_of_list = yes
+					effect = { save_event_target_as = gray_species }
+				}
+			}
+		}
+		change_dominant_species = { species = event_target:gray_species change_all = yes }
 	}
 }
 

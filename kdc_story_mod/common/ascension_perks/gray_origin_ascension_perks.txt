@@ -93,35 +93,16 @@ ap_become_the_gray = {
 				has_country_flag = finish_gray_storyline
 			}
 		}
-		custom_tooltip = {
-			fail_text = "requires_technology_gene_tailoring"
-			has_technology = tech_gene_tailoring
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_synthetic_workers"
-			has_technology = tech_synthetic_workers
-		}
+		has_technology = tech_building_nanoassembly_plant
+		has_technology = tech_nano_biomechanics
 		if = {
 			limit = { owner_main_species = { is_special_modding_archetype = no }}
 			custom_tooltip = {
-				fail_text = "requires_not_ap_the_flesh_is_weak"
-				NOT = { has_ascension_perk = ap_the_flesh_is_weak }
-			}
-			custom_tooltip = {
-				fail_text = "requires_not_ap_organo_machine_interfacing"
-				NOT = { has_ascension_perk = ap_organo_machine_interfacing }
-			}
-			custom_tooltip = {
-				fail_text = "requires_not_ap_synthetic_evolution"
-				NOT = { has_ascension_perk = ap_synthetic_evolution }
-			}
-			custom_tooltip = {
-				fail_text = "requires_not_ap_synthetic_age"
-				NOT = { has_ascension_perk = ap_synthetic_age }
-			}
-			custom_tooltip = {
-				fail_text = "requires_not_ap_mind_over_matter"
-				NOT = { has_ascension_perk = ap_mind_over_matter }
+				fail_text = "has_no_ap_synthetic_evolution"
+				NOR = {
+					has_ascension_perk = ap_synthetic_evolution
+					has_ascension_perk = ap_synthetic_age
+				}
 			}
 		}
 		else = {

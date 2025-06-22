@@ -4,7 +4,7 @@
  trait_gray_origin_desc: "这个种族出生在一个常年有自然灾难的星球上，他们的身体的分子构成似乎异于常人，而千百年来的进化使得他们能适应在大多数极端环境的生活。"
  gray_trait_species_gray: "纳米机械意识"
  gray_trait_species_gray_desc: "这个种族被改造成为无数纳米级机械聚集而成的机械意识体，其存在的生命形式超越了所有传统已知生物。"
- TRAIT_GRAY_SPECIES_EFFECT: "$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+200%§!\n$MOD_POP_DEMOTION_TIME_MULT$: §G-100%§!\n$mod_planet_jobs_produces_mult$: §G+25%§!\n$MOD_POP_RESETTLEMENT_COST_MULT$: §G-50%§!\n每个人口每月消耗0.5 £nanites£ §Y$nanites$§!\n所有人口将§H不会消耗食物§!"
+ TRAIT_GRAY_SPECIES_EFFECT: "$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+200%§!\n$MOD_POP_DEMOTION_TIME_MULT$: §G-100%§!\n$mod_planet_jobs_produces_mult$: §G+25%§!\n$MOD_POP_RESETTLEMENT_COST_MULT$: §G-50%§!\n每个人口每月消耗0.5 £nanites£ §Y$nanites$§!"
  gray_species_trait_modifier: "$gray_trait_species_gray$"
  gray_trait_nano_assembly: "高速纳米组装"
  gray_trait_nano_assembly_desc: ""

@@ -8,8 +8,16 @@ create_gray_official = {
 	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
-		event_target:gray_leader_admiral = { kill_leader = { show_notification = no fire = yes } }
-		event_target:gray_warship = { delete_fleet = this }		#删除灰风母舰
+		random_owned_leader = {
+			limit = { has_leader_flag = gray_leader }
+			kill_leader = { show_notification = no fire = yes }
+		}
+		random_owned_fleet = {
+			limit = { has_fleet_flag = gray_fleet }
+			delete_fleet = {
+				target = this kill_leader = no
+			}
+		}
 	}
 	if = {
 		limit = { has_country_flag = gray_army_active }
@@ -74,8 +82,9 @@ create_gray_warship = {
 	if = {
 		limit = { has_country_flag = gray_official_active }
 		remove_country_flag = gray_official_active
-		event_target:gray_official = {
-			kill_leader = { show_notification = no }
+		random_owned_leader = {
+			limit = { has_leader_flag = gray_leader }
+			kill_leader = { show_notification = no fire = yes }
 		}
 	}
 	if = {
@@ -213,14 +222,15 @@ create_gray_warship = {
 #创造灰风地面单位
 create_gray_army = {
 	optimize_memory
-	if = {
-		limit = { has_country_flag = gray_official_active }
-		remove_country_flag = gray_official_active
-		event_target:gray_official = { kill_leader = { show_notification = no } }
+	random_owned_leader = {
+		limit = { has_leader_flag = gray_leader }
+		kill_leader = { show_notification = no fire = yes }
 	}
-	if = {
-		limit = { has_country_flag = gray_warship_active }
-		event_target:gray_warship = { save_event_target_as = gray_transport_location }
+	random_owned_fleet = {
+		limit = { has_fleet_flag = gray_fleet }
+		delete_fleet = {
+			target = this kill_leader = no
+		}
 	}
 	else_if = {
 		limit = { has_country_flag = gray_official_active }

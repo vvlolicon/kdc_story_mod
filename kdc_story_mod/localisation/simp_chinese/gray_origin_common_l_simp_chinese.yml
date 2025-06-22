@@ -11,9 +11,7 @@
  NANITESCROP_compliment_plural_02: "白毛老婆"
  NANITES_CROP: "$NANITESCROP$"
 # ascension perks
- ap_perfect_evolution:"§E完美进化§!"
- ap_perfect_evolution_desc:"在追求长生的道路上，我们学会了只有让意识超然于物质之外，才能实现真正的永生。但千万年来进化的身体对于我们来说真的是一无是处吗？其实我们自身便是完美的生命之母。只要踏出了那完美的第一步，我们的身心都能长存于宇宙间。"
-
+ has_no_ap_synthetic_evolution: "$TRIGGER_FAIL$ 没有§H合成进化§!/§H合成时代§!飞升天赋"
  must_finish_gray_storyline: "$TRIGGER_FAIL$ 必须先完成主线事件故事"
  ap_become_the_gray: "§E化身灰蛊§!"
  ap_become_the_gray_desc: "在我们的领导下，我们的帝国日渐强大，我们正触碰着最前沿的纳米成型技术，我们正朝着能够理解万物，制造万物的方向迈进...但这远远不够，我们需要成为万物自身 —— “成为灰蛊”。"
