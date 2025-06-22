@@ -128,6 +128,7 @@
  mod_planet_pops_nanites_upkeep_mult: "£job£岗位£nanites£ $nanites$维护费"
  mod_shipclass_military_build_cost_mult: "军用舰船建造花费"
  mod_pop_jobs_nano_research_points_mult: "£job£岗位§E纳米研究点§!产出"
+ mod_country_jobs_nano_research_points_mult: "$mod_pop_jobs_nano_research_points_mult$"
 
 # 传统——纳米化
  tr_nanomachanic:"纳米化"

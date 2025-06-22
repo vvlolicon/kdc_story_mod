@@ -9,7 +9,7 @@ gray_trait_lv3_research = {
     species_possible_remove = {
         wsg_can_remove_beneficial_traits = yes
     }
-    prerequisites = { tech_nano_biomechanics }
+    prerequisites = { tech_living_nano_construction }
     allowed_archetypes = {
         NANITES_CROP WARSHIPGIRL SHENHAI UNITED_FLEET STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
@@ -49,6 +49,7 @@ gray_trait_lv3_space_engineering = {
         NANITES_CROP WARSHIPGIRL SHENHAI UNITED_FLEET STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
     icon="gfx/interface/icons/traits/gray_trait_lv3_space_engineering.dds"
+    prerequisites = { tech_living_nano_construction }
 
     modifier = {
         starbase_building_build_speed_mult = 0.5
@@ -80,6 +81,7 @@ gray_trait_lv3_building = {
         NANITES_CROP WARSHIPGIRL SHENHAI UNITED_FLEET STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
     icon="gfx/interface/icons/traits/gray_trait_lv3_building.dds"
+    prerequisites = { tech_living_nano_construction }
 
     resources = {
         category = planet_pops

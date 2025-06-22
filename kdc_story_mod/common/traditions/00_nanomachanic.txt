@@ -46,10 +46,9 @@ tr_nanomachanic_4 = {
 		has_tradition = tr_nanomachanic_1
 		has_tradition = tr_nanomachanic_2
 	}
-	on_enabled = {
-		change_variable = { which = nanotech_points_mult value = 0.25 }
+	modifier = {
+		country_jobs_nano_research_points_mult = 0.25
 	}
-
 	ai_weight = {
 		factor = 1000
 	}
