@@ -14,6 +14,9 @@ gray_research_situation = {
 		set_variable = { which = tech_repeat_nano_consumer_goods_produce value = owner.tech_repeat_nano_consumer_goods_produce }
 		set_variable = { which = tech_repeat_nano_research_produce value = owner.tech_repeat_nano_research_produce }
 		set_variable = { which = tech_repeat_nanoweapon value = owner.tech_repeat_nanoweapon }
+		set_variable = { which = tech_repeat_nano_gestalt_network value = owner.tech_repeat_nano_gestalt_network }
+		set_variable = { which = tech_repeat_large_scale_network_manage value = owner.tech_repeat_large_scale_network_manage }
+		set_variable = { which = tech_repeat_nano_biostructure_enhance value = owner.tech_repeat_nano_biostructure_enhance }
 		
 		# 将数据转移到局势里，避免数据碰撞
 		set_variable = { which = cur_gray_tech_req value = owner.cur_gray_tech_req }
@@ -142,6 +145,15 @@ gray_research_situation = {
 					check_variable = { which = tech_repeat_nano_research_produce value < 20 }
 					check_variable = { which = gray_tech_id value = 1045 }
 				}
+				AND = {
+					check_variable = { which = tech_repeat_nano_gestalt_network value < 10 }
+					check_variable = { which = gray_tech_id value = 3024 }
+				}
+				AND = {
+					check_variable = { which = tech_repeat_large_scale_network_manage value < 10 }
+					check_variable = { which = gray_tech_id value = 3042 }
+				}
+				check_variable = { which = gray_tech_id value = 3053 }
 				check_variable = { which = gray_tech_id value = 2054 }
 			}
 		}

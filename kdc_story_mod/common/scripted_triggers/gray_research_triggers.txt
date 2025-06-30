@@ -858,8 +858,7 @@ gray_tech_3042_prerequisites_trigger = {
     has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_3042_trigger = {
-    # 循环科技，没有最大等级
-    always = no
+    has_country_flag = tech_repeat_large_scale_network_manage_finish
 }
 gray_tech_3050_prerequisites_trigger = {
     # custom_tooltip = {

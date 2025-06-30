@@ -1306,9 +1306,19 @@ country_event = {
 	trigger = { gray_tech_finish_event_trigger = { ID = 3042 }}
 	immediate = {
 		remove_modifier = tech_repeat_large_scale_network_manage_buff
-		change_variable = { which = tech_repeat_large_scale_network_manage value = 1 }
-		add_modifier = { modifier = tech_repeat_large_scale_network_manage_buff multiplier = tech_repeat_large_scale_network_manage }
-		# 这个科技没有最大等级，不用检查
+		# buff刷新在变量前，因为变量数值比buff实际乘量大1，这样在科技显示等级时是下一级的循环科技
+		add_modifier = { modifier = tech_repeat_large_scale_network_manage_buff
+			multiplier = tech_repeat_large_scale_network_manage }
+		# 检查是否到达上限等级，如果是就不加变量，这样在科技显示等级不会超过最大等级
+		if = {
+			limit = {
+				check_variable = { which = tech_repeat_large_scale_network_manage value < 10 }
+			}
+			change_variable = { which = tech_repeat_large_scale_network_manage value = 1 }
+		} else = {
+			# 超过最大等级给个flag在科技界面显示完成图标
+			set_country_flag = tech_repeat_large_scale_network_manage_finish
+		}
 	}
 }
 country_event = {

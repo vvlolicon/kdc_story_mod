@@ -1,6 +1,7 @@
 "NANITESCROP" = {
 	archetype = NANITES_CROP
 	playable = { has_global_flag = game_started }
+
 	randomized = no
 	gender = no
 	use_climate_preference = no

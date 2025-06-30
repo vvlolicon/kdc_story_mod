@@ -13,8 +13,12 @@
 NANITES_CROP = {
 	species_trait_points = 15
 	species_max_traits = 8
+	inherit_traits_from = { STARSHIPGIRLS CG_compatible_species_archetype ELF }
 	resources = {
 		category = planet_pops
+		upkeep = {
+			nanites = 0.5
+		}
 		produces = {
 			trigger = {
 				exists = planet
@@ -24,5 +28,4 @@ NANITES_CROP = {
 			physics_research = 1
 		}
 	}
-	inherit_traits_from = { STARSHIPGIRLS }
 }

@@ -27,6 +27,14 @@ district_arcology_graygoo_housing = {
 			energy = 5
 		}
 	}
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_wg_hive_world_housing
+		district_wg_forge
+	}
 
 	inline_script = districts/gray_arcology_district_housing_add
 }
@@ -58,6 +66,13 @@ district_arcology_graygoo_rural_1 = {
 		upkeep = {
 			energy = 5
 		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
 	}
 
 	inline_script = districts/gray_arcology_district_housing_add
@@ -92,6 +107,13 @@ district_arcology_graygoo_rural_2 = {
 		}
 	}
 
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+	}
+
 	inline_script = districts/gray_arcology_district_housing_add
 }
 
@@ -122,6 +144,13 @@ district_arcology_graygoo_rural_3 = {
 		upkeep = {
 			energy = 5
 		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
 	}
 
 	inline_script = districts/gray_arcology_district_housing_add

@@ -25,10 +25,71 @@ ship_event = {
 	}
 }
 
+# Gray 1
+country_event = {
+	id = graygoo.401
+	title = NAME_Gray
+	desc = {
+		trigger = { is_machine_empire = no }
+		text = "graygoo.401.a.desc"
+	}
+	desc = {
+		trigger = { is_machine_empire = yes }
+		text = "graygoo.401.b.desc"
+	}
+
+	diplomatic = yes
+	custom_gui = gray_dialogue_window
+	custom_gui_option = wg_dialogue_button
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = gray_dialogue_bg value = 3 }
+		set_variable = { which = wg_dialogue_gray_portrait value = 1 }
+	}
+
+	option = {
+		name = graygoo.401.a
+		trigger = {
+			NOR = {
+				is_machine_empire = yes
+				is_hive_empire = yes
+			}
+		}
+		hidden_effect = {
+			country_event = { id = graygoo.402 }
+		}
+	}
+	option = {
+		name = graygoo.401.b
+		trigger = {
+			is_machine_empire = yes
+		}
+		hidden_effect = {
+			country_event = { id = graygoo.402 }
+		}
+	}
+	option = {
+		name = graygoo.401.c
+		trigger = {
+			is_hive_empire = yes
+		}
+		hidden_effect = {
+			country_event = { id = graygoo.402 }
+		}
+	}
+	option = {
+		name = EMPTY_STRING
+		custom_gui = wg_hiding_button
+		default_hide_option = yes
+		hidden_effect = { country_event = { id = graygoo.406 }}
+	}
+}
+
 # Gray 2
 country_event = {
 	id = graygoo.402
-	title = graygoo.402.title
+	title = NAME_Gray
 	desc = {
 		trigger = { NOT = { has_authority = auth_machine_intelligence } }
 		text = "graygoo.402.a.desc"
@@ -39,15 +100,10 @@ country_event = {
 	}
 
 	diplomatic = yes
-	custom_gui = wg_dialogue_window
+	custom_gui = gray_dialogue_window
 	custom_gui_option = wg_dialogue_button
 
 	is_triggered_only = yes
-
-	immediate = {
-		set_variable = { which = wg_dialogue_bg value = 3 }
-		set_variable = { which = wg_dialogue_character value = 1 }
-	}
 
 	option = {
 		name = graygoo.402.a
@@ -55,16 +111,22 @@ country_event = {
 			country_event = { id = graygoo.403 }
 		}
 	}
+	option = {
+		name = EMPTY_STRING
+		custom_gui = wg_hiding_button
+		default_hide_option = yes
+		hidden_effect = { country_event = { id = graygoo.406 }}
+	}
 }
 
 # Gray 3
 country_event = {
 	id = graygoo.403
-	title = graygoo.402.title
+	title = NAME_Gray
 	desc = "graygoo.403.desc"
 
 	diplomatic = yes
-	custom_gui = wg_dialogue_window
+	custom_gui = gray_dialogue_window
 	custom_gui_option = wg_dialogue_button
 
 	is_triggered_only = yes
@@ -75,16 +137,22 @@ country_event = {
 			country_event = { id = graygoo.404 }
 		}
 	}
+	option = {
+		name = EMPTY_STRING
+		custom_gui = wg_hiding_button
+		default_hide_option = yes
+		hidden_effect = { country_event = { id = graygoo.406 }}
+	}
 }
 
 # Gray 4
 country_event = {
 	id = graygoo.404
-	title = graygoo.402.title
+	title = NAME_Gray
 	desc = "graygoo.404.desc"
 
 	diplomatic = yes
-	custom_gui = wg_dialogue_window
+	custom_gui = gray_dialogue_window
 	custom_gui_option = wg_dialogue_button
 
 	is_triggered_only = yes
@@ -95,16 +163,22 @@ country_event = {
 			country_event = { id = graygoo.405 }
 		}
 	}
+	option = {
+		name = EMPTY_STRING
+		custom_gui = wg_hiding_button
+		default_hide_option = yes
+		hidden_effect = { country_event = { id = graygoo.406 }}
+	}
 }
 
 # Gray 5
 country_event = {
 	id = graygoo.405
-	title = graygoo.402.title
+	title = NAME_Gray
 	desc = "graygoo.405.desc"
 
 	diplomatic = yes
-	custom_gui = wg_dialogue_window
+	custom_gui = gray_dialogue_window
 	custom_gui_option = wg_dialogue_button
 
 	is_triggered_only = yes
@@ -119,16 +193,22 @@ country_event = {
 		name = graygoo.405.b
 		response_text = graygoo.405.b.response
 	}
+	option = {
+		name = EMPTY_STRING
+		custom_gui = wg_hiding_button
+		default_hide_option = yes
+		hidden_effect = { country_event = { id = graygoo.406 }}
+	}
 }
 
 # Gray 6
 country_event = {
 	id = graygoo.406
-	title = graygoo.406.title
+	title = NAME_Gray
 	desc = "graygoo.406.desc"
 
 	diplomatic = yes
-	custom_gui = wg_dialogue_window
+	custom_gui = gray_dialogue_window
 	custom_gui_option = wg_dialogue_button
 
 	is_triggered_only = yes
@@ -145,6 +225,7 @@ country_event = {
 	}
 	option = {
 		name = graygoo.406.c
+		response_text = graygoo.406.c.response
 		default_hide_option = yes
 		hidden_effect = {
 			country_event = { id = graygoo.499 }
@@ -194,16 +275,6 @@ country_event = {
 					"null"
 					"null"
 				}
-			}
-		}
-		create_species = {
-			name = GRAY_SPECIES
-			plural = GRAY_SPECIES
-			class = ART
-			portrait = art13
-			namelist = ART1
-			effect = {
-				save_global_event_target_as = gray_species
 			}
 		}
 		last_created_country = {
