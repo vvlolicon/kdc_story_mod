@@ -77,9 +77,9 @@ portrait_groups = {
 				}
 			}
 		}
-		#pop scope
-		species = {
-			#for a specific pop
+		#species scope
+		pop_group = {
+			#generic portrait for a species
 			add = {
 				portraits = {
 					Nanitescrop01
