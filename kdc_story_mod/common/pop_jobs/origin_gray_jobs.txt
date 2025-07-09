@@ -604,7 +604,7 @@ gray_nano_bureaucrat = {
 			}
 		}
 		modifier = {
-			country_admin_cap_add = 2
+			empire_size_add = -2
 		}
 	}	
 	
