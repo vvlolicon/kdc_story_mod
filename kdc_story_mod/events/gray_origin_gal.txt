@@ -948,6 +948,10 @@ country_event = {
 	id = gray_gal.36
 	title = NAME_Gray
 	desc = gray_gal.36.desc
+	desc = {
+		exclusive_trigger = { has_country_flag = surveyed_all_lcluster }
+		text = gray_gal.36.desc.b
+	}
 	is_triggered_only = yes
 	diplomatic = yes
 	custom_gui = gray_dialogue_window
@@ -1178,11 +1182,11 @@ country_event = {
 	}
 	desc = {
 		exclusive_trigger = {
+			is_gestalt = no
 			NOR = {
-				is_gestalt = no
 				has_authority = auth_shenhai
+				has_country_flag = refuse_storyline_talk_to_gray
 			}
-			NOT = { has_country_flag = gray_storyline_control }
 		}
 		text = gray_gal.44.desc.b
 	}
@@ -1212,11 +1216,11 @@ country_event = {
 	option = {
 		name = gray_gal.44.b
 		trigger = {
+			is_gestalt = no
 			NOR = {
-				is_gestalt = no
 				has_authority = auth_shenhai
+				has_country_flag = refuse_storyline_talk_to_gray
 			}
-			NOT = { has_country_flag = refuse_storyline_talk_to_gray}
 		}
 	}
 	option = {

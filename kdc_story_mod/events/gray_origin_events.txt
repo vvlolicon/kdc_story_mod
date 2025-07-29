@@ -1324,18 +1324,7 @@ planet_event = {
 	immediate = {
 		owner = {
 			set_country_flag = triggered_gray_origin44
-			if = {
-				limit = { has_country_flag = surveyed_all_lcluster }
-				country_event = { id = gray_origin.47 }
-			} else = {
-				if = {
-					limit = { has_country_flag = refuse_storyline_talk_to_gray }
-					country_event = { id = gray_origin.47 days = 360 }
-				}
-				else = {
-					country_event = { id = gray_origin.46 days = 360 }
-				}
-			}
+			country_event = { id = gray_origin.46 }
 			country_event = { id = graygoo.499 }
 		}
 	}
@@ -1365,7 +1354,7 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_country = {
+		random_country = {
 			limit = {
 				is_country_type = default
 				has_origin = origin_gray
@@ -1390,6 +1379,10 @@ country_event = {
 	trigger = {
 		has_country_flag = origin_gray_country
 		FROM = { has_star_flag = gray_origin_lcluster }
+		NOR = {
+			has_country_flag = surveyed_all_lcluster
+			has_country_flag = triggered_gray_origin46
+		}
 	}
 
 	immediate = {
@@ -1409,22 +1402,26 @@ country_event = {
 				limit = { capital_scope = {
 					has_active_building = building_nanite_signal_control_center
 				}}
-				country_event = { id = gray_origin.47 }
+				country_event = { id = gray_origin.46 }
 			}
 		}
 	}
 }
-# 未完成8个星系的探索事件
+# 改造纳米星球事件
 country_event = {
 	id = gray_origin.46
 	title = gray_origin.46.name
 	desc = gray_origin.46.desc
+	desc = {
+		exclusive_trigger = { has_country_flag = surveyed_all_lcluster }
+		text = gray_origin.47.desc
+	}
 	picture = GFX_evt_gray_gooed_planet
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { has_country_flag = surveyed_all_lcluster }
+		NOT = { has_country_flag = triggered_gray_origin46}
 	}
+	after = { set_country_flag = triggered_gray_origin46 }
 
 	option = {
 		name = UNDERSTOOD
@@ -1436,29 +1433,6 @@ country_event = {
 			else = {
 				country_event = { id = gray_gal.36 }
 			}
-		}
-	}
-}
-# 完成8个星系的探索事件
-# 2.3.2-1
-country_event = {
-	id = gray_origin.47
-	title = gray_origin.47.name
-	desc = gray_origin.47.desc
-	picture = GFX_evt_gray_gooed_planet
-	is_triggered_only = yes
-
-	trigger = {
-		has_country_flag = surveyed_all_lcluster
-	}
-
-	option = {
-		name = UNDERSTOOD
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_country_flag = gray_storyline_control }}
-			}
-			country_event = { id = gray_gal.44 }
 		}
 	}
 }
