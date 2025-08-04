@@ -228,13 +228,7 @@ create_gray_army = {
 		limit = { has_leader_flag = gray_leader }
 		kill_leader = { show_notification = no fire = yes }
 	}
-	random_owned_fleet = {
-		limit = { has_fleet_flag = gray_fleet }
-		delete_fleet = {
-			target = this kill_leader = no
-		}
-	}
-	else_if = {
+	if = {
 		limit = { has_country_flag = gray_official_active }
 		if = {
 			limit = { any_owned_planet = {
@@ -246,14 +240,21 @@ create_gray_army = {
 					exists = leader
 					leader = { has_leader_flag = gray_official }
 				}
-				save_event_target_as = gray_warship_location
+				save_event_target_as = gray_transport_location
 			}
 		} else = {
 			capital_scope = {
-				save_event_target_as = gray_warship_location
+				save_event_target_as = gray_transport_location
 			}
 		}
-	} 
+	}
+	else_if = {
+		limit = { has_country_flag = gray_warship_active }
+		random_owned_fleet = {
+			limit = { has_fleet_flag = gray_fleet }
+			save_event_target_as = gray_transport_location
+		}
+	}
 	else = {
 		capital_scope = { save_event_target_as = gray_transport_location }
 	}
@@ -263,9 +264,8 @@ create_gray_army = {
 		effect = {
 			set_owner = root
 			create_army_transport = {
-				species = event_target:gray_owner
+				species = event_target:gray_owner.owner_main_species
 				ship_name = "NAME_Gray"
-				#graphical_culture = "root"
 				army_name = "NAME_Gray"
 				army_type = "gray_army"
 			}
@@ -274,6 +274,12 @@ create_gray_army = {
 				distance = 0
 				angle = random 
 			}
+		}
+	}
+	random_owned_fleet = {
+		limit = { has_fleet_flag = gray_fleet }
+		delete_fleet = {
+			target = this kill_leader = no
 		}
 	}
 	if = {
