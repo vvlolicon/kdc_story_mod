@@ -20,5 +20,6 @@
 
  mod_megastructures_unity_cost_mult: ""
  mod_megastructures_alloys_cost_mult: ""
+ UNITED_FLEET_species_trait_picks_add: "联合舰队"
 
 

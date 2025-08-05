@@ -597,19 +597,10 @@ building_gray_nano_research_elite = 	{
 	planet_modifier = {
 		custom_tooltip = building_gray_nano_research_elite_effect
 		job_gray_nano_researcher_add = 800
+		pop_researcher_bonus_workforce_mult = 0.5
 	}
 	country_modifier = {
-		pop_gray_nano_researcher_bonus_workforce_mult = 0.5
-		pop_physicist_bonus_workforce_mult = 0.5
-		pop_biologist_bonus_workforce_mult = 0.5
-		pop_engineer_bonus_workforce_mult = 0.5
-	}
-
-	on_built = {
-		owner = { change_variable = { which = nanotech_points_per_pop_mult value = 0.5 }}
-	}
-	on_destroy = {
-		owner = { change_variable = { which = nanotech_points_per_pop_mult value = -0.5 }}
+		pop_jobs_nano_research_points_mult = 0.5
 	}
 	resources = {
 		category = planet_buildings

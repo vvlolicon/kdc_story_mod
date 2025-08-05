@@ -209,6 +209,7 @@ ap_graygoo_megastructures = {
 	}
 
 	modifier = {
+		country_magastructure_nano_research_points_mult = 0.5
 		megastructure_build_speed_mult = 0.5
 		megastructures_cost_mult = -0.15
 	}

@@ -1,4 +1,5 @@
-# use on pop scope
+# scope: pop_group
+# 用于岗位计算纳米研究点产出
 gray_job_nano_research_points_mult = {
     base = 1
     mult = value:gray_job_nano_research_points_policy_mult
@@ -6,6 +7,7 @@ gray_job_nano_research_points_mult = {
 }
 
 # do not use this directly
+# 计算政策提供的纳米研究点乘算
 gray_job_nano_research_points_policy_mult = {
     base = 1
     modifier = {
@@ -25,9 +27,9 @@ gray_job_nano_research_points_policy_mult = {
 }
 
 # do not use this directly
+# 计算岗位的纳米研究点乘算
 gray_job_nano_research_points_buff_mult = {
     base = 1
-    add = owner.nanotech_points_per_pop_mult
     add = modifier:pop_jobs_nano_research_points_mult
     add = owner.modifier:country_jobs_nano_research_points_mult
 }

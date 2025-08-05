@@ -244,6 +244,7 @@ tech_macro_nanorobot_technology = {
 	weight = 0
 	modifier = {
 		country_resource_max_nanites_add = 1000000
+		country_nano_research_points_mult = 0.2
 	}
 	potential = {
 		is_ai = no

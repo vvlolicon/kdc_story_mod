@@ -53,6 +53,10 @@ gray_trait_species_gray = {
 		pop_demotion_time_mult = -1.0
 		planet_jobs_produces_mult = 0.3
 		pop_resettlement_cost_mult = -0.5
+		pop_category_slave_food_upkeep_mult = -1
+		pop_category_workers_food_upkeep_mult = -1
+		pop_category_specialists_food_upkeep_mult = -1
+		pop_category_rulers_food_upkeep_mult = -1
 	}
 	triggered_planet_growth_habitability_modifier = {
 		pop_growth_speed = 1

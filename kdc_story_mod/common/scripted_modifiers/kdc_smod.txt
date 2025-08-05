@@ -20,3 +20,15 @@ country_jobs_nano_research_points_mult = {
 	good = yes
 	category = country
 }
+country_nano_research_points_mult = {
+	icon = mod_planet_jobs_nano_research_points_mult
+	percentage = yes
+	good = yes
+	category = country
+}
+country_magastructure_nano_research_points_mult = {
+	icon = mod_planet_jobs_nano_research_points_mult
+	percentage = yes
+	good = yes
+	category = country
+}

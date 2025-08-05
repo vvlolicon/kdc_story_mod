@@ -17,7 +17,6 @@ gray_trait_lv3_research = {
 
     modifier = {
         pop_researcher_bonus_workforce_mult = 0.5
-        pop_jobs_nano_research_points_mult = 0.5
         planet_researchers_nanites_upkeep_add = 3
     }
     triggered_leader_modifier = {

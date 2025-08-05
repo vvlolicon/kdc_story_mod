@@ -14,12 +14,11 @@ gray_trait_lv2_miner = {
         NANITES_CROP WARSHIPGIRL SHENHAI UNITED_FLEET STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
     icon= gfx/interface/icons/traits/gray_trait_lv2_miner.dds
-    # prerequisites = { "tech_gray_genetic_resequencing" }
-    # custom_tooltip = TRAIT_GRAY_NANO_ASSEMBLY_EFFECT
+    custom_tooltip = gray_trait_lv2_miner_effect
+
     modifier = {
-        planet_jobs_minerals_produces_mult = 0.5
-        planet_jobs_energy_produces_mult = 0.5
-        planet_miners_nanites_produces_mult = 0.35
+        pop_miner_bonus_workforce_mult = 0.5
+        pop_technician_bonus_workforce_mult = 0.5
     }
     resources = {
         category = planet_pops
@@ -45,8 +44,8 @@ gray_trait_lv2_governor = {
         NANITES_CROP WARSHIPGIRL SHENHAI UNITED_FLEET STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
     icon="gfx/interface/icons/traits/gray_trait_lv2_governor.dds"
-    # prerequisites = { "tech_gray_genetic_resequencing" }
-    # custom_tooltip = TRAIT_GRAY_NANO_ASSEMBLY_EFFECT
+    custom_tooltip = gray_trait_lv2_governor_effect
+
     modifier = {
         planet_jobs_unity_produces_mult = 0.35
     }
@@ -74,16 +73,15 @@ gray_trait_lv2_research = {
         NANITES_CROP WARSHIPGIRL SHENHAI UNITED_FLEET STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
     icon="gfx/interface/icons/traits/gray_trait_lv2_research.dds"
-    # prerequisites = { "tech_gray_genetic_resequencing" }
-    # custom_tooltip = TRAIT_GRAY_NANO_ASSEMBLY_EFFECT
+    custom_tooltip = gray_trait_lv2_research_effect
+
     modifier = {
-        pop_researcher_workforce_mult = 0.35
-        pop_jobs_nano_research_points_mult = 0.35
+        pop_researcher_bonus_workforce_mult = 0.35
     }
     resources = {
         category = planet_pops
         upkeep = {
-            nanites = 0.35
+            nanites = 0.25
         }
     }
     opposites = { gray_trait_lv1_nano_research gray_trait_lv1_research gray_trait_lv3_research  }
@@ -132,7 +130,7 @@ gray_trait_lv2_assembly = {
     }
     icon="gfx/interface/icons/traits/gray_trait_lv2_assembly.dds"
     # prerequisites = { "tech_gray_genetic_resequencing" }
-    # custom_tooltip = TRAIT_GRAY_NANO_ASSEMBLY_EFFECT
+    custom_tooltip = gray_trait_lv2_assembly_effect
     triggered_planet_pop_group_modifier_for_species = {
         bonus_pop_growth = 0.4
     }
@@ -196,6 +194,7 @@ gray_trait_lv2_trade = {
     }
     icon="gfx/interface/icons/traits/gray_trait_lv2_trade.dds"
 
+    custom_tooltip = gray_trait_lv2_trade_effect
     resources = {
         category = planet_pops
         produces = {

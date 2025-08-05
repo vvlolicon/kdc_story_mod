@@ -14,8 +14,8 @@ gray_trait_lv1_miner = {
     # prerequisites = { "tech_gray_genetic_resequencing" }
     # custom_tooltip = TRAIT_GRAY_NANO_ASSEMBLY_EFFECT
     modifier = {
-        planet_jobs_minerals_produces_mult = 0.3
-        planet_jobs_energy_produces_mult = 0.3
+        pop_miner_bonus_workforce_mult = 0.3
+        pop_technician_bonus_workforce_mult = 0.3
     }
 
     opposites = { gray_trait_lv1_exoskeleton gray_trait_lv1_industrial }
@@ -35,6 +35,7 @@ gray_trait_lv1_recycle = {
     }
     icon="gfx/interface/icons/traits/gray_trait_lv1_recycle.dds"
 
+    custom_tooltip = gray_trait_lv1_recycle_effect
     resources = {
         category = planet_pops
         upkeep = {
@@ -58,15 +59,13 @@ gray_trait_lv1_research = {
         BIOLOGICAL NANITES_CROP WARSHIPGIRL SHENHAI STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
     icon= gfx/interface/icons/traits/gray_trait_lv1_research.dds
-    # prerequisites = { "tech_gray_genetic_resequencing" }
-    # custom_tooltip = TRAIT_GRAY_NANO_ASSEMBLY_EFFECT
+
     modifier = {
-        pop_researcher_workforce_mult = 0.2
+        planet_jobs_physics_research_produces_mult = 0.2
+        planet_jobs_society_research_produces_mult = 0.2
+        planet_jobs_engineering_research_produces_mult = 0.2
     }
-    # triggered_planet_growth_habitability_modifier = {
-    #     potential = { exists = owner }
-    #     planet_pop_assembly_organic_mult = 0.4
-    # }
+
     opposites = { gray_trait_lv1_nano_research gray_trait_lv3_research gray_trait_lv2_research }
 }
 gray_trait_lv1_nano_research = {
@@ -83,17 +82,11 @@ gray_trait_lv1_nano_research = {
         BIOLOGICAL NANITES_CROP WARSHIPGIRL SHENHAI STARSHIPGIRLS KANMUSU KANSEN TOUHOUGIRLS NYTO Dolls KZ_VOY_TERRAN_DESCENDANT
     }
     icon= gfx/interface/icons/traits/gray_trait_lv1_research.dds
-    # prerequisites = { "tech_gray_genetic_resequencing" }
-    # custom_tooltip = TRAIT_GRAY_NANO_ASSEMBLY_EFFECT
+
     modifier = {
-        planet_jobs_physics_research_produces_mult = 0.2
-        planet_jobs_society_research_produces_mult = 0.2
-        planet_jobs_engineering_research_produces_mult = 0.2
+        pop_jobs_nano_research_points_mult = 0.2
     }
-    # triggered_planet_growth_habitability_modifier = {
-    #     potential = { exists = owner }
-    #     planet_pop_assembly_organic_mult = 0.4
-    # }
+
     opposites = { gray_trait_lv1_research gray_trait_lv3_research gray_trait_lv2_research }
 }
 gray_trait_lv1_industrial = {
@@ -112,8 +105,8 @@ gray_trait_lv1_industrial = {
     icon="gfx/interface/icons/traits/gray_trait_lv1_industrial.dds"
 
     modifier = {
-        planet_jobs_alloys_produces_mult = 0.2
-        planet_jobs_consumer_goods_produces_mult = 0.2
+        pop_foundry_bonus_workforce_mult = 0.2
+        pop_artisan_bonus_workforce_mult = 0.2
     }
     opposites = { gray_trait_lv1_miner gray_trait_lv1_exoskeleton }
 }
@@ -199,7 +192,7 @@ gray_trait_lv1_trade = {
     icon="gfx/interface/icons/traits/gray_trait_lv1_trade.dds"
 
     modifier = {
-        trader_jobs_bonus_workforce_mult = 0.3
+        pop_trader_bonus_workforce_mult = 0.3
     }
 
     opposites = { gray_trait_lv2_trade }

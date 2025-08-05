@@ -85,7 +85,7 @@ button_tech_planet_killer_graygoo = {
 	inline_script = {
 		script = "button_effects/gray_research_tech_button"
 		CAT = 1 ID = 2021
-		tech_points = @gray_t5_tech_points
+		tech_points = 12500
 	}
 }
 button_tech_gray_nano_aura = {

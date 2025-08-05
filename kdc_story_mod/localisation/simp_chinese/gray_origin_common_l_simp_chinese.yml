@@ -129,6 +129,8 @@
  mod_shipclass_military_build_cost_mult: "军用舰船建造花费"
  mod_pop_jobs_nano_research_points_mult: "£job£岗位§E纳米研究点§!产出"
  mod_country_jobs_nano_research_points_mult: "$mod_pop_jobs_nano_research_points_mult$"
+ mod_country_nano_research_points_mult: "帝国§E纳米研究点§!产出"
+ mod_country_magastructure_nano_research_points_mult: "巨型建筑§E纳米研究点§!产出"
 
 # 传统——纳米化
  tr_nanomachanic:"纳米化"

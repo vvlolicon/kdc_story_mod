@@ -18,7 +18,7 @@
  nanoresearch_points_require_text: "[this.cur_gray_tech_req]"
  nanotech_days_require_tooltip: "研发科技总共需要的时间。"
  nanoresearch_points_tech_icon_tooltip: "研发科技总共需要的纳米研究点数\n\n以目前的研究速度计算，预计至少需要§Y[owner.appox_month_gray_research_finish]§!个月完成这项科技。"
- growing_nanoresearch_points_icon_tooltip: "每月产出的纳米研究点数\n-------------------------------\n帝国基础纳米研究点数产出：§H25§!\n来自£job£岗位：§H[owner.nanotech_points_from_pop]§!\n　£job£岗位产出点数加成: §G+[from.nanopoints_from_pop_mult_perc]%§!\n来自巨型建筑：§H[from.nanotech_points_from_mega]§!\n　巨型建筑产出点数加成: §G+[from.nanopoints_from_mega_mult_perc]%§!\n帝国产出的纳米点数加成: §G+[from.nanopoints_mult_perc]%§!"
+ growing_nanoresearch_points_icon_tooltip: "每月产出的纳米研究点数\n-------------------------------\n帝国基础纳米研究点数产出：§H25§!\n来自£job£岗位：§H[owner.nanotech_points_from_pop]§!\n　£job£岗位产出点数加成: §G+[from.nanopoints_from_pop_mult_perc]%§!\n来自巨型建筑：§H[from.nanotech_points_from_mega]§!\n　巨型建筑产出点数加成: §G+[from.nanopoints_from_mega_mult_perc]%§!\n$mod_country_nano_research_points_mult$: §G+[from.nanotech_points_country_perc]%§!"
 
  mod_gray_nano_research_points: "纳米研究点"
 
@@ -29,6 +29,7 @@
  GRAY_RESEARCH_FINISH_MESSAGE_DESC: "已$TECH$"
  gray_research_finish_effect: "获得科技：§Y[this.GetGrayTechTitle]§!"
  situation_gray_research_default: "正常研究"
+ situation_gray_research_default_tooltip: "正常研究科技"
  situation_gray_research_pause: "§H暂停研究§!"
  situation_gray_research_pause_tooltip: "这可以让当前研究的科技停止花费纳米研究点数，从而将研究点数平分给其他正处于研究的科技，加快其研究进度。"
  situation_gray_research_cancel: "§R取消研究§!"
@@ -37,9 +38,10 @@
  situation_gray_research_repeat_tooltip: "自动重复研究此循环科技"
  situation_gray_research_repeat_cancel: "取消重复研究"
  situation_gray_research_repeat_cancel_tooltip:"取消重复研究此循环科技"
- gray_research_situation_monthly_change_tooltip: "科技研发的进度取决于帝国中§E纳米研究点数§!的增长。"
+ gray_research_situation_monthly_change_tooltip: "当前进度：[this.acc_nanotech_points_show] / [this.cur_gray_tech_req]\n本月用于该科技的科研点：§G+[this.nanotech_points_grow]§!"
  gray_research_situation_days_monthly_change_tooltip: "该科技研发的速度是固定的，不受任何因素影响。"
- situation_gray_research_progress_tooltip: "每月取得的科研进度"
+ situation_gray_research_progress_tooltip: "每月科研进度增长（百分比）"
+ situation_nanotech_progress: ""
  gray_research_initial_progress_tooltip: "冗余的纳米科研点数"
  already_reseaching_gray_tech: "已经正在研究该项科技！"
  gray_research_slot_overload: "我们目前只能同时研究§H[root.num_gray_research_slot]项§!科技！"
@@ -211,7 +213,7 @@
 
  tech_macro_nanorobot_technology: "§R宏观纳米机器技术§!"
  tech_macro_nanorobot_technology_desc: "操纵数以兆计的纳米机械的技术即使到最近才能有所突破，但我们还不能停下，我们现在将更进一步操控更多的纳米机械来完成恒星级巨型构造以及上古灰蛊战争机器的还原。"
- tech_macro_nanorobot_technology_effect: "纳米研究人员产生的纳米科研点：§G+100%§!"
+ tech_macro_nanorobot_technology_effect: "$mod_country_nano_research_points_mult$: §G+20%§!\n$mod_country_resource_max_nanites_add$: §G+1000000§! "
  gray_tech_1070_tooltip: "£engineering_research£['technology:tech_macro_nanorobot_technology']\n\n$tech_macro_nanorobot_technology_effect$"
 
 

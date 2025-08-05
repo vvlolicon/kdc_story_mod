@@ -47,7 +47,7 @@ tr_nanomachanic_4 = {
 		has_tradition = tr_nanomachanic_2
 	}
 	modifier = {
-		country_jobs_nano_research_points_mult = 0.25
+		country_nano_research_points_mult = 0.25
 	}
 	ai_weight = {
 		factor = 1000

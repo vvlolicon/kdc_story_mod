@@ -9,6 +9,7 @@ gray_research_situation = {
 
 	on_start = {
 		# 循环科技相关的变量（仅用于显示）
+		set_variable = { which = acc_nanotech_points_show value = 0 }
 		set_variable = { which = tech_repeat_nanite_produce value = owner.tech_repeat_nanite_produce }
 		set_variable = { which = tech_repeat_nano_alloy_produce value = owner.tech_repeat_nano_alloy_produce }
 		set_variable = { which = tech_repeat_nano_consumer_goods_produce value = owner.tech_repeat_nano_consumer_goods_produce }
@@ -71,20 +72,23 @@ gray_research_situation = {
 		icon_background = GFX_situation_approach_bg_green
 		default = yes
 		on_select = {
-			if = {
-				limit = { has_situation_flag = locked }
-				set_situation_locked = no
-				remove_situation_flag = locked
-			}
-			hidden_effect = { owner = {
-				every_situation = {
-					limit = {
-						is_situation_type = gray_research_situation
-						NOT = { current_situation_approach = situation_gray_research_pause }
-					}
-					situation_event = { id = gray_tech.4 }
+			custom_tooltip = situation_gray_research_default_tooltip
+			hidden_effect = {
+				if = {
+					limit = { has_situation_flag = locked }
+					set_situation_locked = no
+					remove_situation_flag = locked
 				}
-			}}
+				owner = {
+					every_situation = {
+						limit = {
+							is_situation_type = gray_research_situation
+							NOT = { current_situation_approach = situation_gray_research_pause }
+						}
+						situation_event = { id = gray_tech.4 }
+					}
+				}
+			}
 		}
 	}
 	# 暂停研究
@@ -261,6 +265,8 @@ gray_research_situation_days = {
 			add = tech_progress_per_month
 			desc = situation_gray_research_progress_tooltip
 		}
+	}
+	modifier = {
 	}
 	# abort_trigger = { has_global_flag = monolith_crisis_end } 
 		

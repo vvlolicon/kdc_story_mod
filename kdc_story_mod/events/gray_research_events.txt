@@ -34,10 +34,6 @@ country_event = {
 			set_variable = { which = nanotech_points_per_pop_mult value = 1 }
 		}
 		if = {
-			limit = { NOT = { is_variable_set = nanotech_points_mult }}
-			set_variable = { which = nanotech_points_mult value = 1 }
-		}
-		if = {
 			limit = { NOT = { is_variable_set = num_gray_research_slot }}
 			set_variable = { which = num_gray_research_slot value = 1 }
 		}
@@ -101,27 +97,39 @@ country_event = {
 	}
 
 	immediate = {
+		##############################################################################
+		# 显示用变量设置（各种纳米科研点buff数值*100%）
+		##############################################################################
 		random_owned_pop_group = {
 			limit = {
 				species = { is_same_species = root.owner_main_species }
 			}
 			root = {
+				# 显示人口加成buff数值用变量
 				set_variable = {
 					which = nanopoints_from_pop_mult_perc
-					value = prev.value:gray_job_nano_research_points_buff_mult
+					value = prev.value:gray_job_nano_research_points_mult
 				}
 				multiply_variable = { which = nanopoints_from_pop_mult_perc value = 100 }
 			}
 		}
-		set_variable = { which = nanopoints_from_mega_mult_perc value = nanotech_points_from_mega_mult }
-		subtract_variable = { which = nanopoints_from_mega_mult_perc value = 1 }
+		set_variable = {
+			which = nanotech_points_country_perc
+			value = modifier:country_nano_research_points_mult
+		}
+		# 百分比显示
+		multiply_variable = { which = nanotech_points_country_perc value = 100 }
+
+		set_variable = {
+			which = nanopoints_from_mega_mult_perc
+			value = modifier:country_magastructure_nano_research_points_mult
+		}
+		# 百分比显示
 		multiply_variable = { which = nanopoints_from_mega_mult_perc value = 100 }
-		set_variable = { which = nanopoints_mult_perc value = nanotech_points_mult }
-		subtract_variable = { which = nanopoints_mult_perc value = 1 }
-		multiply_variable = { which = nanopoints_mult_perc value = 100 }
-		# 实际科技点增长 = （基础科技点增长 + 巨构产出的科技点 + 纳米研究岗位人口 * 岗位人口产出的科技点）* 帝国科技点buff
-		set_variable = { which = nanotech_points_grow value = nanotech_points_grow_base }
-		
+		##############################################################################
+		# 纳米科研点计算
+		##############################################################################
+		# 计算人口科研点
 		set_variable = { which = nanotech_points_from_pop value = 0 }
 		# 由于岗位内已内置了代表纳米研究点的自定义modifier，这个modifier会在星球自动加总，所以直接提取即可
 		every_owned_planet = {
@@ -131,24 +139,26 @@ country_event = {
 				value = prev.modifier:gray_nano_research_points }
 			}
 		}
-		change_variable = { which = nanotech_points_grow value = nanotech_points_from_pop }
-
+		#计算巨构科研点
 		set_variable = { which = nanotech_points_from_mega value = 0 }
 		every_owned_megastructure = {
+			clear_variable = nanotech_points_from_mega
 			if = {
-				limit = { OR = { 
-					is_megastructure_type = think_tank_4
+				limit = { is_megastructure_type = think_tank_1 }
+				set_variable = { which = nanotech_points_from_mega value = 30 }
+			}
+			else_if = {
+				limit = { is_megastructure_type = think_tank_2 }
+				set_variable = { which = nanotech_points_from_mega value = 75 }
+			}
+			else_if = {
+				limit = { OR = {
 					is_megastructure_type = think_tank_3
+					is_megastructure_type = think_tank_4
 					is_megastructure_type = think_tank_restored
 					is_megastructure_type = gray_nano_think_tank 
 				}}
-				owner = { set_variable = { which = nanotech_points_from_mega value = 150 }}
-				break = yes
-			}
-			switch = {
-				trigger = is_megastructure_type
-				think_tank_2 = { set_variable = { which = nanotech_points_from_mega value = 75 }}
-				think_tank_1 = { set_variable = { which = nanotech_points_from_mega value = 30 }}
+				set_variable = { which = nanotech_points_from_mega value = 150 }
 			}
 			if = {
 				limit = { has_global_flag = AOW_installed}
@@ -182,17 +192,21 @@ country_event = {
 					set_variable = { which = nanotech_points_from_mega value = star.nanotech_points_from_mega }
 				}
 			}
-			owner = { change_variable = { which = nanotech_points_from_mega value = prev.nanotech_points_from_mega }}
+			owner = { change_variable = {
+				which = nanotech_points_from_mega
+				value = prev.nanotech_points_from_mega
+			}}
 		}
 		multiply_variable = {
 			which = nanotech_points_from_mega
-			value = nanotech_points_from_mega_mult
+			value = value:gray_megastructure_nanotech_points_country_mult
 		}
-		change_variable = { which = nanotech_points_grow value = nanotech_points_from_mega }
 
-		multiply_variable = { which = nanotech_points_grow value = nanotech_points_mult }
-
-
+		#套用value计算最终结果，详见sv
+		set_variable = {
+			which = nanotech_points_grow
+			value = value:gray_nanotech_points
+		}
 		# 刷新所有研究situation的局势（研究）速度
 		every_situation = {
 			limit = {
@@ -201,6 +215,7 @@ country_event = {
 			}
 			situation_event = { id = gray_tech.4 }
 		}
+		# country_event = { id = gray_tech.5 }
 	}
 }
 
@@ -215,9 +230,11 @@ situation_event = {
 		# nanotech_points_grow = 本月增长的纳米研究点数
 		# cur_acc_nanotech_points = 当前已累积的纳米研究点数
 		# cur_gray_tech_req = 当前科技需求的纳米研究点数
+
 		# 计算有多少个正在进行的研究，并将点数平分给所有正在研究的科技
 		set_variable = { which = nanotech_points_grow value = owner.nanotech_points_grow }
 		if = {
+			# 如果完成纳米化传统，不会平分点数
 			limit = { owner = { NOT = { has_tradition = tr_nanomachanic_finish }}}
 			calculate_gray_tech_points_grow = yes
 		}
@@ -228,6 +245,9 @@ situation_event = {
 		set_variable = { which = cur_gray_research_perc value = cur_acc_nanotech_points }
 		divide_variable = { which = cur_gray_research_perc value = cur_gray_tech_req }
 		multiply_variable = { which = cur_gray_research_perc value = 100 }
+
+		set_variable = { which = acc_nanotech_points_show value = cur_acc_nanotech_points }
+		subtract_variable = { which = acc_nanotech_points_show value = nanotech_points_grow }
 
 		situation_event = { id = gray_tech.4 }
 	}
@@ -497,8 +517,6 @@ country_event = {
 		set_country_flag = opened_gray_research_window
 		set_variable = { which = gray_research_category_show value = 0 }
 		country_event = { id = gray_tech.1 }
-
-		
 	}
 	after = {
 		hidden_effect = { 

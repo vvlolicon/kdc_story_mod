@@ -2,17 +2,7 @@
 ######################## 灰风起源科技
  weapon_type_nano: "§E纳米武器§!"
 
- PLANET_KILLER_GRAYGOO: "灰蛊风暴"
- PLANET_KILLER_GRAYGOO_DESC: "向目标行星投放大量无法控制的纳米机械，将目标星球的所有原子全部同质化成纳米机械，使其瞬间变为混乱的，无法居住的纳米星球。"
- PLANET_KILLER_GRAYGOO_ACTION: "纳米化"
- MESSAGE_DESC_FOR_PLANET_KILLER_GRAYGOO: "被纳米化"
- FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_GRAYGOO: "准备纳米化 $PLANET|Y$"
- is_not_pc_graygoo: "§R$TRIGGER_FAIL$目标已经是§Y$pc_gray_goo$§!了§!"
- PLANET_KILLER_GRAYGOO_GRAY: "灰蛊风暴"
- PLANET_KILLER_GRAYGOO_GRAY_DESC: "向目标行星投放大量无法控制的纳米机械，将目标星球的所有原子全部同质化成纳米机械，使其瞬间变为混乱的，无法居住的纳米星球。"
- PLANET_KILLER_GRAYGOO_GRAY_ACTION: "纳米化"
- MESSAGE_DESC_FOR_PLANET_KILLER_GRAYGOO_GRAY: "被纳米化"
- FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_GRAYGOO_GRAY: "准备纳米化 $PLANET|Y$"
+
  wg_gray_h: "纳米舰载机中队"
  wg_gray_l: "纳米重型主炮"
  wg_gray_p: "纳米点防阵列"
