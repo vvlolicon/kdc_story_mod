@@ -41,6 +41,11 @@ button_icon_tech_building_gray_nanite_factory2 = {
 	allow = {}
 	effect = {}
 }
+button_icon_tech_building_gray_nano_regenerator = {
+	potential = { from = { check_variable = { which = gray_tech_id value = 1018 }}}
+	allow = {}
+	effect = {}
+}
 button_icon_tech_building_gray_nano_foundry = {
 	potential = { from = { check_variable = { which = gray_tech_id value = 1020 }}}
 	allow = {}

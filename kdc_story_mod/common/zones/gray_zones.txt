@@ -140,7 +140,7 @@ zone_gray_soldier = {
         exists = owner
         owner = {
             is_wilderness_empire = no
-            has_technology = tech_nano_army
+            has_technology = tech_building_gray_fortress
         }
     }
     included_building_sets = {

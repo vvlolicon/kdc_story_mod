@@ -871,10 +871,7 @@ building_nano_reconstructor = {
 	can_be_disabled = no
 
 	building_sets = {
-		urban
-		industrial
-		factory
-		foundry
+		all
 	}
 
 	category = resource
@@ -1234,6 +1231,53 @@ building_gray_nanite_mining = {
 		nanites = 5
 		trigger = {
 			always = yes
+		}
+	}
+}
+
+building_gray_nano_regenerator = {
+	base_buildtime = 1200
+	base_cap_amount = 1
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+
+	building_sets = {
+		all
+	}
+
+	category = resource
+
+	potential = {
+		exists = planet
+		OR = {
+			owner = { is_ai = no }
+			free_building_slots > 0
+		}
+		owner = {
+			has_ascension_perk = ap_become_the_gray
+			has_country_flag = gray_tech_1018_researched
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_desc = {
+		text = building_gray_nano_regenerator_effect
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1200
+			nanites = 150
+		}
+		upkeep = {
+			energy = 12
+			nanites = 5
 		}
 	}
 }

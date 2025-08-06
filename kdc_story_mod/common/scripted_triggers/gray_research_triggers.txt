@@ -32,6 +32,26 @@ gray_tech_finish_event_trigger = {
     }
 }
 
+is_gray_repeatable_tech = {
+    # 循环科技
+    check_variable = { which = gray_tech_id value = 1015 }
+    check_variable = { which = gray_tech_id value = 1025 }
+    check_variable = { which = gray_tech_id value = 1035 }
+    check_variable = { which = gray_tech_id value = 1045 }
+    check_variable = { which = gray_tech_id value = 2054 }
+    check_variable = { which = gray_tech_id value = 3024 }
+    check_variable = { which = gray_tech_id value = 3042 }
+    check_variable = { which = gray_tech_id value = 3053 }
+
+    # 多等级科技
+    check_variable = { which = gray_tech_id value = 1011 }
+    check_variable = { which = gray_tech_id value = 1024 }
+    check_variable = { which = gray_tech_id value = 1034 }
+    check_variable = { which = gray_tech_id value = 1043 }
+    check_variable = { which = gray_tech_id value = 3010 }
+    check_variable = { which = gray_tech_id value = 3041 }
+}
+
 #############################################################################
 # 生产科技
 #############################################################################
@@ -87,18 +107,26 @@ has_gray_tech_1015_trigger = {
 }
 
 gray_tech_1016_prerequisites_trigger = {
-    has_technology = tech_TMR_nanite_productor
+    has_technology = tech_building_gray_nanite_factory2
 }
 has_gray_tech_1016_trigger = {
-    has_technology = tech_building_gray_nanite_factory
+    has_technology = tech_nano_reconstruct
+    has_ascension_perk = ap_become_the_gray
 }
 
 gray_tech_1017_prerequisites_trigger = {
-    has_technology = tech_nano_reconstruct
+    has_technology = tech_building_gray_nanite_factory
     has_ascension_perk = ap_become_the_gray
 }
 has_gray_tech_1017_trigger = {
     has_technology = tech_building_gray_nanite_factory2
+}
+
+gray_tech_1018_prerequisites_trigger = {
+    has_technology = tech_nano_reconstruct
+}
+has_gray_tech_1018_trigger = {
+    has_country_flag = gray_tech_1018_researched
 }
 
 gray_tech_1020_prerequisites_trigger = {

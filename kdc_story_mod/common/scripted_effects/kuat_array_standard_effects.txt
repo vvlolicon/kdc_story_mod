@@ -542,13 +542,13 @@ kuat_get_digits = {
 		divide_variable = { which = $ARRAY$_TEMP value = 10 }
 		change_variable = { which = $ARRAY$_DIGITS value = 1 }
 	}
-	floor_variable = $ARRAY$_TEMP
 	if = {
 		limit = { NOT = { check_variable = { which = $VARIABLE$ value = 0 }}}
 		while = {
 			count = $ARRAY$_DIGITS #3
 			set_variable = { which = $ARRAY$_TEMP_INT value = $ARRAY$_TEMP }
 			change_variable = { which = $ARRAY$_AT_DIGIT value = 1 }
+			floor_variable = $ARRAY$_TEMP_INT
 			subtract_variable = { which = $ARRAY$_TEMP value = $ARRAY$_TEMP_INT }
 
 			if = { # save the digit number to another variable
@@ -567,13 +567,9 @@ kuat_get_digits = {
 				limit = { check_variable = { which = $ARRAY$_AT_DIGIT value = 4 }}
 				set_variable = { which = $ARRAY$_DIGIT_4 value = $ARRAY$_TEMP_INT }
 			}
-
 			multiply_variable = { which = $ARRAY$_TEMP value = 10 }
 		}
 	}
-	clear_variable = $ARRAY$_TEMP
-	clear_variable = $ARRAY$_AT_DIGIT
-	clear_variable = $ARRAY$_TEMP_INT
 }
 
 # 将数组内指定索引的值复制到指定的变量中
@@ -891,10 +887,12 @@ remove_array_variables = {
 # input: ARRAY, VARIABLE # 数组名，变量名
 kuat_clear_array_variable = {
 	optimize_memory
+	kuat_get_digits = { ARRAY = $ARRAY$ VARIABLE = $VARIABLE$ }
 	inline_script = { 
         script = kuat_reasearch_event/kuat_clear_array_variable_Config 
         ARRAY = $ARRAY$ VARIABLE = $VARIABLE$
     }
+	remove_array_variables = { ARRAY = $ARRAY$ }
 	# if = {
 	# 	limit = { check_variable = { which = $VARIABLE$ value = 0 }}
 	# 	clear_variable = $ARRAY$_0

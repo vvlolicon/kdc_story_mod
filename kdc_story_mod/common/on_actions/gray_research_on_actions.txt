@@ -12,6 +12,7 @@ on_gray_tech_increased = {
 		gray_tech.1015
 		gray_tech.1016
 		gray_tech.1017
+		gray_tech.1018
 		gray_tech.1020
 		gray_tech.1021
 		gray_tech.1022

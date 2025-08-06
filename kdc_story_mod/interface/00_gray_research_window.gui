@@ -177,6 +177,7 @@ guiTypes = {
 		@tech_icon_c1x3 = 297
 		@tech_icon_c1x4 = 369
 		@tech_icon_c1x5 = 450
+		@tech_icon_c1x5a = 506
 		@tech_icon_c1x6 = 557
 		@tech_icon_c1x7 = 663
 		@tech_icon_c1x8 = 742
@@ -215,15 +216,22 @@ guiTypes = {
 			name = "icon_tech_nano_reconstruct"
 			quadTextureSprite = "GFX_tech_nano_reconstruct"
 			orientation = "UPPER_LEFT"
-			position = { x = @tech_icon_c1x3 y = @tech_icon_c1y1 }
+			position = { x = @tech_icon_c1x4 y = @tech_icon_c1y1 }
 			effect = "button_tech_nano_reconstruct"
 		}
 		effectButtonType = {
 			name = "icon_tech_building_gray_nanite_factory2"
 			quadTextureSprite = "GFX_tech_building_gray_nanite_factory2"
 			orientation = "UPPER_LEFT"
-			position = { x = @tech_icon_c1x4 y = @tech_icon_c1y1 }
+			position = { x = @tech_icon_c1x3 y = @tech_icon_c1y1 }
 			effect = "button_tech_building_gray_nanite_factory2"
+		}
+		effectButtonType = {
+			name = "icon_tech_building_gray_nano_regenerator"
+			quadTextureSprite = "GFX_tech_building_gray_nano_regenerator"
+			orientation = "UPPER_LEFT"
+			position = { x = @tech_icon_c1x5a y = @tech_icon_c1y1 }
+			effect = "button_tech_building_gray_nano_regenerator"
 		}
 		effectButtonType = {
 			name = "icon_tech_building_nanoassembly_plant"
@@ -957,18 +965,25 @@ guiTypes = {
 			effect = "button_tech_building_gray_nanite_factory_finish"
 		}
 		effectButtonType = {
-			name = "icon_tech_nano_reconstruct_finish"
-			quadTextureSprite = "GFX_gray_research_icon_finish"
-			orientation = "UPPER_LEFT"
-			position = { x = @tech_icon_c1x3 y = @tech_icon_c1y1 }
-			effect = "button_tech_nano_reconstruct_finish"
-		}
-		effectButtonType = {
 			name = "icon_tech_building_gray_nanite_factory2_finish"
 			quadTextureSprite = "GFX_gray_research_icon_finish"
 			orientation = "UPPER_LEFT"
-			position = { x = @tech_icon_c1x4 y = @tech_icon_c1y1 }
+			position = { x = @tech_icon_c1x3 y = @tech_icon_c1y1 }
 			effect = "button_tech_building_gray_nanite_factory2_finish"
+		}
+		effectButtonType = {
+			name = "icon_tech_nano_reconstruct_finish"
+			quadTextureSprite = "GFX_gray_research_icon_finish"
+			orientation = "UPPER_LEFT"
+			position = { x = @tech_icon_c1x4 y = @tech_icon_c1y1 }
+			effect = "button_tech_nano_reconstruct_finish"
+		}
+		effectButtonType = {
+			name = "icon_tech_building_gray_nano_regenerator_finish"
+			quadTextureSprite = "GFX_gray_research_icon_finish"
+			orientation = "UPPER_LEFT"
+			position = { x = @tech_icon_c1x5a y = @tech_icon_c1y1 }
+			effect = "button_tech_building_gray_nano_regenerator_finish"
 		}
 		effectButtonType = {
 			name = "icon_tech_building_nanoassembly_plant_finish"

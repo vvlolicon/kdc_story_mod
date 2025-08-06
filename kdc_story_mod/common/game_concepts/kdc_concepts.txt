@@ -17,3 +17,5 @@ concept_policy_gray_research_policy = {}
 concept_gray_origin_lv1_species_traits = {}
 concept_gray_origin_lv2_species_traits = {}
 concept_gray_origin_lv3_species_traits = {}
+
+concept_gray_jobs = {}

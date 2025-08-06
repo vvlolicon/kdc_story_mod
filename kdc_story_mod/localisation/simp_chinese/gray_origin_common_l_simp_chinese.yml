@@ -159,8 +159,10 @@
  concept_gray_planet_debuff_desc: "—$MOD_POP_ENVIRONMENT_TOLERANCE$: §R-20%§!\n—$MOD_PLANET_MAX_DISTRICTS_ADD$: §R-5§!\n—$mod_district_farming_max$: §R-2§!\n—$mod_district_generator_max$: §R-2§!\n—$mod_district_mining_max$: §R-2§!\n—$mod_planet_jobs_minerals_produces_mult$: §R-20%§!\n—$mod_planet_jobs_food_produces_mult$: §R-20%§!\n—$mod_planet_jobs_energy_produces_mult$: §R-20%§!\n—$mod_planet_jobs_physics_research_produces_mult$: §G+20%§!\n—$mod_planet_jobs_engineering_research_produces_mult$: §G+20%§!\n\n§L$gray_planet_debuff_desc$§!"
  concept_building_nanite_signal_control_center: "纳米信号控制中枢"
  concept_building_nanite_signal_control_center_desc: "—$mod_planet_jobs_physics_research_produces_mult$: §G+20%§!\n—$mod_planet_jobs_society_research_produces_mult$: §G+20%§!\n—$mod_planet_jobs_engineering_research_produces_mult$: §G+20%§!\n£job_researcher£$mod_job_gray_nano_researcher_add$: §G+8§!\n\n§L$building_nanite_signal_control_center_desc$§!"
+ concept_gray_jobs: "纳米生产岗位"
+ concept_gray_jobs_desc: "纳米生产岗位包括：\n  —$job_gray_nano_artisan$\n  —$job_gray_nano_foundry$\n  —$job_gray_nano_researcher$\n  —$job_gray_nanite_manufacturer$\n  —$job_pc_graygoo_nanite_manufacturer$\n  —$job_gray_nano_rare_resource_manufacturer$\n  —$job_gray_nano_bureaucrat$\n  —$job_gray_nano_soldier$"
 
-# 陆军
+ # 陆军
  gray_nano_drones: "$tech_nano_drones$"
  gray_nano_drones_plural: "$tech_nano_drones$"
  gray_nano_drones_desc: "$tech_nano_drones_desc$"

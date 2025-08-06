@@ -56,6 +56,14 @@ gray_nano_artisan = {
 			nanites = 3
 			minerals = -4
 		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
+		}
 	}
 
 	weight = {
@@ -153,6 +161,14 @@ gray_nano_foundry = {
 			nanites = 3
 			minerals = -4
 		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
+		}
 	}
 
 	weight = {
@@ -235,7 +251,15 @@ gray_nano_researcher = {
 		upkeep = {
 			consumer_goods = 6
 			nanites = 3
-		}		
+		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
+		}
 	}	
 	planet_modifier = {
 		
@@ -377,6 +401,14 @@ gray_nanite_manufacturer = {
 			energy = 2
 			minerals = 4
 		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
+		}
 	}
 	
 	weight = {
@@ -480,6 +512,14 @@ pc_graygoo_nanite_manufacturer = {
 			}
 			energy = 4.5
 		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
+		}
 	}
 	
 	weight = {
@@ -556,6 +596,14 @@ gray_nano_rare_resource_manufacturer = {
 			}
 			sr_tibanna_swgs = 6
 			sr_kyber_swgs = 2
+		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
 		}
 	}
 	
@@ -660,6 +708,14 @@ gray_nano_bureaucrat = {
 			energy = -2
 			consumer_goods = -2
 		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
+		}
 	}
 
 
@@ -748,6 +804,14 @@ gray_nano_soldier = {
 			nanites = 4
 			energy = -2
 			consumer_goods = -2
+		}
+		produces = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			trade = 3
+		}
+		upkeep = {
+			trigger = { planet = { has_building = building_gray_nano_regenerator }}
+			nanites = 1
 		}
 	}	
 	

@@ -246,9 +246,6 @@ situation_event = {
 		divide_variable = { which = cur_gray_research_perc value = cur_gray_tech_req }
 		multiply_variable = { which = cur_gray_research_perc value = 100 }
 
-		set_variable = { which = acc_nanotech_points_show value = cur_acc_nanotech_points }
-		subtract_variable = { which = acc_nanotech_points_show value = nanotech_points_grow }
-
 		situation_event = { id = gray_tech.4 }
 	}
 }
@@ -310,6 +307,14 @@ situation_event = {
 		}
 		owner = {
 			set_variable = { which = gray_tech_id value = root.gray_tech_id }
+			if = {
+				limit = { is_gray_repeatable_tech = yes }
+				# 当中断研究的科技重新研究并研究完成，移除储存的点数。
+				kuat_clear_array_variable = {
+					ARRAY = stored_nanotech_points_array
+					VARIABLE = gray_tech_id
+				}
+			}
 			if = {
 				limit = { root = { has_situation_flag = repeat_research }}
 				root = {
@@ -390,18 +395,25 @@ situation_event = {
 # 注意：该系统使用数列运算法作为储存系统的核心
 # 数列运算会导致后期游戏运行速度明显降低，请斟酌使用！
 # 如果不需要使用数列运算，请删除scripted_effect 中的array_effects.txt文件以及以下事件！
-country_event = {
+situation_event = {
 	id = gray_tech.10
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		set_variable = { which = cur_acc_nanotech_points value = from.cur_acc_nanotech_points }
-		set_variable = { which = gray_tech_id value = from.gray_tech_id }
-		# 将已研究的点数储存到数列中（ARRAY为储存的数列名，VALUE为储存的数值（变量），VARIABLE为储存的索引（变量）
-		# 详见scripted_effect 中的array_effects.txt文件里的注释
-		kuat_set_array_variable = { ARRAY = stored_nanotech_points_array VALUE = cur_acc_nanotech_points VARIABLE = gray_tech_id }
-		destroy_situation = from
+		owner = {
+			set_variable = { which = cur_acc_nanotech_points value = root.cur_acc_nanotech_points }
+			set_variable = { which = gray_tech_id value = root.gray_tech_id }
+			kuat_get_digits = { ARRAY = stored_nanotech_points_array VARIABLE = gray_tech_id }
+			# 将已研究的点数储存到数列中（ARRAY为储存的数列名，VALUE为储存的数值（变量），VARIABLE为储存的索引（变量）
+			# 详见scripted_effect 中的array_effects.txt文件里的注释
+			kuat_set_array_variable = {
+				ARRAY = stored_nanotech_points_array
+				VALUE = cur_acc_nanotech_points
+				VARIABLE = gray_tech_id
+			}
+		}
+		destroy_situation = this
 	}
 }
 # 研究进度提取
@@ -419,35 +431,49 @@ situation_event = {
 			# 将数列中储存的已研究点数变量提取出来
 			# （ARRAY为储存的数列名，VARIABLE为储存的索引（变量），OUT为转存的变量名
 			# 详见scripted_effect 中的array_effects.txt文件里的注释
-			kuat_get_array_variable = { ARRAY = stored_nanotech_points_array VARIABLE = gray_tech_id OUT = cur_gray_research_perc }
+			kuat_get_array_variable = {
+				ARRAY = stored_nanotech_points_array
+				VARIABLE = gray_tech_id
+				OUT = stored_gray_nanotech_points
+			}
 		}
 		if = {
-			limit = { owner = { check_variable = { which = cur_gray_research_perc value > 0 }}}
-			set_variable = { which = cur_gray_research_perc value = owner.cur_gray_research_perc }
+			limit = { owner = { check_variable = { which = stored_gray_nanotech_points value > 0 }}}
+			set_variable = { which = stored_gray_nanotech_points value = owner.stored_gray_nanotech_points }
 			# 将已储存的点数累加到已研究进度的变量上（在这步的时候该变量仍然是点数而不是百分比）
-			change_variable = { which = cur_acc_nanotech_points value = cur_gray_research_perc }
+			change_variable = { which = cur_acc_nanotech_points value = stored_gray_nanotech_points }
+			set_variable = { which = cur_gray_research_perc value = stored_gray_nanotech_points }
 			# 计算增加的局势进度
 			divide_variable = { which = cur_gray_research_perc value = cur_gray_tech_req }
 			multiply_variable = { which = cur_gray_research_perc value = 100 }
 			add_situation_progress = cur_gray_research_perc
+			owner = {
+				# 清除已存储的研究点数进展
+				kuat_clear_array_variable = { ARRAY = stored_nanotech_points_array VARIABLE = gray_tech_id  }
+			}
 		}
 		# situation_event = { id = gray_tech.2 }
 	}
 }
 # 研究进度储存（天数）
-country_event = {
+situation_event = {
 	id = gray_tech.12
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		from = { set_variable = { which = research_month_passed value = trigger:situation_progress }}
-		set_variable = { which = research_month_passed value = from.research_month_passed }
-		set_variable = { which = gray_tech_id value = from.gray_tech_id }
-		# 将已研究的点数储存到数列中（ARRAY为储存的数列名，VALUE为储存的数值（变量），VARIABLE为储存的索引（变量）
-		# 详见scripted_effect 中的array_effects.txt文件里的注释
-		kuat_set_array_variable = { ARRAY = stored_nanotech_time_array VALUE = research_month_passed VARIABLE = gray_tech_id }
-		destroy_situation = from
+		owner = {
+			set_variable = { which = research_month_passed value = root.trigger:situation_progress }
+			set_variable = { which = gray_tech_id value = from.gray_tech_id }
+			# 将已研究的点数储存到数列中（ARRAY为储存的数列名，VALUE为储存的数值（变量），VARIABLE为储存的索引（变量）
+			# 详见scripted_effect 中的array_effects.txt文件里的注释
+			kuat_set_array_variable = {
+				ARRAY = stored_nanotech_time_array
+				VALUE = research_month_passed
+				VARIABLE = gray_tech_id
+			}
+		}
+		destroy_situation = this
 	}
 }
 # 研究进度提取（天数）
@@ -457,17 +483,21 @@ situation_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# owner = {
-		# 	set_variable = { which = gray_tech_id value = root.gray_tech_id }
-		# 	# 将数列中储存的已研究点数变量提取出来
-		# 	# （ARRAY为储存的数列名，VARIABLE为储存的索引（变量），OUT为转存的变量名
-		# 	# 详见scripted_effect 中的array_effects.txt文件里的注释
-		# 	kuat_get_array_variable = { ARRAY = stored_nanotech_time_array VARIABLE = gray_tech_id OUT = stored_gray_research_time }
-		# }
+		owner = {
+			set_variable = { which = gray_tech_id value = root.gray_tech_id }
+			# 将数列中储存的已研究点数变量提取出来
+			# （ARRAY为储存的数列名，VARIABLE为储存的索引（变量），OUT为转存的变量名
+			# 详见scripted_effect 中的array_effects.txt文件里的注释
+			kuat_get_array_variable = { ARRAY = stored_nanotech_time_array VARIABLE = gray_tech_id OUT = stored_gray_research_time }
+		}
 		if = {
 			limit = { owner = { check_variable = { which = stored_gray_research_time value > 0 }}}
 			set_variable = { which = stored_gray_research_time value = owner.stored_gray_research_time }
 			add_situation_progress = stored_gray_research_time
+			owner = {
+				# 清除已存储的研究天数进展
+				kuat_clear_array_variable = { ARRAY = stored_nanotech_time_array VARIABLE = gray_tech_id  }
+			}
 		}
 	}
 }
@@ -706,6 +736,13 @@ country_event = {
 	is_triggered_only = yes
 	trigger = { gray_tech_finish_event_trigger = { ID = 1017 }}
 	immediate = { give_technology = { tech = tech_building_gray_nanite_factory2 message = no }}
+}
+country_event = {
+	id = gray_tech.1018
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { gray_tech_finish_event_trigger = { ID = 1018 }}
+	immediate = { set_country_flag = gray_tech_1018_researched }
 }
 country_event = {
 	id = gray_tech.1010

@@ -684,6 +684,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/gray_research/tech_cat_3/tech_gray_fortress2.dds"
 		effectFile = "gfx/FX/buttonstate.shader"
 	}
-
-
+	spriteType = {
+		name = "GFX_tech_building_gray_nano_regenerator"
+		texturefile = "gfx/interface/gray_research/tech_cat_1/tech_building_gray_nano_regenerator.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
 }

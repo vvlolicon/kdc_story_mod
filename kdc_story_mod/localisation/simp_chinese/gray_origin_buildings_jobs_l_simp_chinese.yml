@@ -60,10 +60,12 @@
  job_gray_nanite_manufacturer_effect_desc: "£job_gray_nanite_manufacturer£ $job_gray_nanite_manufacturer$ 消耗 £energy£ §Y$energy$§!和 £minerals£ §Y$minerals$§! 转化为 £nanites£ §Y$nanites$§!。"
  mod_pop_gray_nanite_manufacturer_bonus_workforce_mult: "$job_gray_nanite_manufacturer$的工作效率"
 
+ building_gray_nano_regenerator: "纳米再生室"
+ building_gray_nano_regenerator_desc: "这个再生室使用最新的纳米转化技术，将工人生产时废弃的边角料和原料转化成可供交易使用的纳米原料，实现材料的高效利用。"
+ building_gray_nano_regenerator_effect: "每100个从事['concept_gray_jobs']的人口额外生产§G+3§!£trade£$trade$，但维护费额外增加§R-1§!£nanites£$nanites$"
+
  building_gray_nano_rare_resource_factory: "纳米化工厂"
  building_gray_nano_rare_resource_factory_desc: "这座大型转化工厂专门从事将纳米机械转化成一些特殊战略物质的工作。虽然转化效率较为低下，但对应转化物质的使用率通常十分稀少，且稀有度和价值较高，因此这座工厂能完全满足帝国对战略物质的需求。"
-
-
  decision_nano_buildings_basic_sr: "【纳米化工厂】生产基础特殊资源"
  decision_nano_buildings_basic_sr_desc: "纳米转化者职业将会生产£rare_crystals£ §H$rare_crystals$§!、£exotic_gases£ §H$exotic_gases$§!和£volatile_motes£ §H$volatile_motes$§!"
  decision_nano_buildings_basic_sr_tooltip: "星球上从事§Y纳米转化者职业§!的人口将会生产以下物资：\n£rare_crystals£ §H$rare_crystals$§!\n£exotic_gases£ §H$exotic_gases$§!\n£volatile_motes£ §H$volatile_motes$§!"

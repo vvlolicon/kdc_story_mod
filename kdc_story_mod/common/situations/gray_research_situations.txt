@@ -9,7 +9,7 @@ gray_research_situation = {
 
 	on_start = {
 		# 循环科技相关的变量（仅用于显示）
-		set_variable = { which = acc_nanotech_points_show value = 0 }
+		set_variable = { which = cur_acc_nanotech_points value = 0 }
 		set_variable = { which = tech_repeat_nanite_produce value = owner.tech_repeat_nanite_produce }
 		set_variable = { which = tech_repeat_nano_alloy_produce value = owner.tech_repeat_nano_alloy_produce }
 		set_variable = { which = tech_repeat_nano_consumer_goods_produce value = owner.tech_repeat_nano_consumer_goods_produce }
@@ -120,7 +120,7 @@ gray_research_situation = {
 			custom_tooltip = situation_gray_research_cancel_tooltip
 			hidden_effect = { 
 				# 研究进度储存
-				owner = { country_event = { id = gray_tech.10 scopes = { from = from }}}
+				situation_event = { id = gray_tech.10 }
 			}
 		}
 	}
@@ -250,7 +250,7 @@ gray_research_situation_days = {
 			custom_tooltip = situation_gray_research_cancel_tooltip
 			hidden_effect = {
 				# 研究进度储存
-				owner = { country_event = { id = gray_tech.12 scopes = { from = from }}}
+				situation_event = { id = gray_tech.12 }
 			}
 		}
 	}

@@ -16,6 +16,12 @@ button_tech_building_gray_nanite_factory2_finish = {
         CAT = 0 ID = 1017
     }
 }
+button_tech_building_gray_nano_regenerator_finish = {
+    inline_script = {
+        script = "button_effects/gray_research_finish_icon"
+        CAT = 0 ID = 1018
+    }
+}
 button_tech_building_nanoassembly_plant_finish = {
     inline_script = {
         script = "button_effects/gray_research_finish_icon"

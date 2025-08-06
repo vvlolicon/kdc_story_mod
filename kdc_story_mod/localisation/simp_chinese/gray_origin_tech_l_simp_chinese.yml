@@ -38,7 +38,7 @@
  situation_gray_research_repeat_tooltip: "自动重复研究此循环科技"
  situation_gray_research_repeat_cancel: "取消重复研究"
  situation_gray_research_repeat_cancel_tooltip:"取消重复研究此循环科技"
- gray_research_situation_monthly_change_tooltip: "当前进度：[this.acc_nanotech_points_show] / [this.cur_gray_tech_req]\n本月用于该科技的科研点：§G+[this.nanotech_points_grow]§!"
+ gray_research_situation_monthly_change_tooltip: "当前进度：[this.cur_acc_nanotech_points] / [this.cur_gray_tech_req]\n本月用于该科技的科研点：§G+[this.nanotech_points_grow]§!"
  gray_research_situation_days_monthly_change_tooltip: "该科技研发的速度是固定的，不受任何因素影响。"
  situation_gray_research_progress_tooltip: "每月科研进度增长（百分比）"
  situation_nanotech_progress: ""
@@ -93,6 +93,11 @@
  tech_building_gray_nanite_factory2_desc: "随着我们对纳米技术的应用得到广泛接纳以及帝国规模的快速增长后，纳米机械对我们帝国的日常生产变得越为关键，我们需要更大量地生产这种纳米机械，以满足帝国内部日益增长的需求。"
  tech_building_gray_nanite_factory2_effect: "$gray_tech_unlock_building$['building:building_gray_nanite_factory2']"
  gray_tech_1017_tooltip: "£physics_research£$tech_building_gray_nanite_factory2$\n\n$tech_building_gray_nanite_factory2_effect$"
+
+ tech_building_gray_nano_regenerator: "$building_gray_nano_regenerator$"
+ tech_building_gray_nano_regenerator_desc: "$building_gray_nano_regenerator_desc$"
+ tech_building_gray_nano_regenerator_effect: "$gray_tech_unlock_building$['building:building_gray_nano_regenerator']"
+ gray_tech_1018_tooltip: "£physics_research£$tech_building_gray_nano_regenerator$\n\n$tech_building_gray_nano_regenerator_effect$"
 
  tech_building_gray_nano_factory: "$building_gray_nano_factory$"
  tech_building_gray_nano_factory_desc: "通过对纳米技术的深入研究，我们现在能够像数百万年前创造这种纳米机器的先驱一样，使用纳米机器创造出任何已知物质了。而通过对这些物质的组织与排列进行精准控制，我们甚至能够完美地高速复制日常使用的消费品"

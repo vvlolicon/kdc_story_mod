@@ -33,6 +33,10 @@ defined_text = {
 		localization_key = tech_building_gray_nanite_factory2_effect
 	}
 	text = {
+		trigger = { check_variable = { which = gray_tech_id value = 1018 }}
+		localization_key = tech_building_gray_nano_regenerator_effect
+	}
+	text = {
 		trigger = { check_variable = { which = gray_tech_id value = 1020 }}
 		localization_key = tech_building_gray_nano_foundry_effect
 	}

@@ -219,6 +219,14 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 		effectButtonType = {
+			name = "icon_tech_building_gray_nano_regenerator"
+			quadTextureSprite = "GFX_tech_building_gray_nano_regenerator"
+			orientation = "UPPER_LEFT"
+			position = { x = @tech_icon_x y = @tech_icon_y }
+			effect = "button_icon_tech_building_gray_nano_regenerator"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
 			name = "icon_tech_nano_reconstruct"
 			quadTextureSprite = "GFX_tech_nano_reconstruct"
 			orientation = "UPPER_LEFT"

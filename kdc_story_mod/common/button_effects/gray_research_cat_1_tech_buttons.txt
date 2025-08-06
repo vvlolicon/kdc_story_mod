@@ -51,6 +51,13 @@ button_tech_building_gray_nanite_factory2 = {
 		tech_points = @gray_t3_tech_points
 	}
 }
+button_tech_building_gray_nano_regenerator = {
+	inline_script = {
+		script = "button_effects/gray_research_tech_button"
+		CAT = 0 ID = 1018
+		tech_points = @gray_t4_tech_points
+	}
+}
 button_tech_building_nanoassembly_plant = {
 	inline_script = {
 		script = "button_effects/gray_research_tech_button"
