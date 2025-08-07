@@ -32,6 +32,25 @@ gray_tech_finish_event_trigger = {
     }
 }
 
+gray_repeatable_tech_limit_trigger = {
+    if = {
+        limit = { check_variable = { which = gray_tech_id value = $ID$ }}
+        check_variable = {
+            which = $NAME$
+            value < gray_repeatable_tech_limit
+        }
+    }
+}
+gray_repeatable_tech_limit_else_trigger = {
+    else_if = {
+        limit = { check_variable = { which = gray_tech_id value = $ID$ }}
+        check_variable = {
+            which = $NAME$
+            value < gray_repeatable_tech_limit
+        }
+    }
+}
+
 is_gray_repeatable_tech = {
     # 循环科技
     check_variable = { which = gray_tech_id value = 1015 }

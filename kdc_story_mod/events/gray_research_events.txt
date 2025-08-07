@@ -319,44 +319,53 @@ situation_event = {
 				limit = { root = { has_situation_flag = repeat_research }}
 				root = {
 					add_situation_progress = -100
-					# 重新计算所需研究点数
+					change_variable = { which = cur_repeatable_tech_lv value = 1 }
 					if = {
-						limit = { check_variable = { which = gray_tech_id value = 1015 }}
-						set_variable = { which = cur_gray_tech_req value = tech_repeat_nanite_produce }
-						if = {
-							limit = { check_variable = { which = cur_gray_tech_req value >= 9 }}
-							remove_situation_flag = repeat_research
-						}
-					} else_if = {
-						limit = { check_variable = { which = gray_tech_id value = 1025 }}
-						set_variable = { which = cur_gray_tech_req value = tech_repeat_nano_alloy_produce }
-						if = {
-							limit = { check_variable = { which = cur_gray_tech_req value >= 9 }}
-							remove_situation_flag = repeat_research
-						}
-					} else_if = {
-						limit = { check_variable = { which = gray_tech_id value = 1035 }}
-						set_variable = { which = cur_gray_tech_req value = tech_repeat_nano_consumer_goods_produce }
-						if = {
-							limit = { check_variable = { which = cur_gray_tech_req value >= 9 }}
-							remove_situation_flag = repeat_research
-						}
-					} else_if = {
-						limit = { check_variable = { which = gray_tech_id value = 1045 }}
-						set_variable = { which = cur_gray_tech_req value = tech_repeat_nano_research_produce }
-						if = {
-							limit = { check_variable = { which = cur_gray_tech_req value >= 19 }}
-							remove_situation_flag = repeat_research
-						}
-					} else_if = {
-						limit = { check_variable = { which = gray_tech_id value = 2054 }}
-						set_variable = { which = cur_gray_tech_req value = tech_repeat_nanoweapon }
+						limit = { check_variable = { which = cur_repeatable_tech_lv value >= gray_repeatable_tech_limit}}
+						remove_situation_flag = repeat_research
+					} else = {
+						owner = { set_country_flag = is_researching_repeatable_tech }
 					}
-					change_variable = { which = cur_gray_tech_req value = 1 }
+					set_variable = { which = cur_gray_tech_req value = cur_repeatable_tech_lv }
+					# 重新计算所需研究点数
+					# if = {
+					# 	limit = { check_variable = { which = gray_tech_id value = 1015 }}
+					# 	set_variable = { which = cur_gray_tech_req value = tech_repeat_nanite_produce }
+					# 	if = {
+					# 		limit = { check_variable = { which = cur_gray_tech_req value >= 9 }}
+					# 		remove_situation_flag = repeat_research
+					# 	}
+					# } else_if = {
+					# 	limit = { check_variable = { which = gray_tech_id value = 1025 }}
+					# 	set_variable = { which = cur_gray_tech_req value = tech_repeat_nano_alloy_produce }
+					# 	if = {
+					# 		limit = { check_variable = { which = cur_gray_tech_req value >= 9 }}
+					# 		remove_situation_flag = repeat_research
+					# 	}
+					# } else_if = {
+					# 	limit = { check_variable = { which = gray_tech_id value = 1035 }}
+					# 	set_variable = { which = cur_gray_tech_req value = tech_repeat_nano_consumer_goods_produce }
+					# 	if = {
+					# 		limit = { check_variable = { which = cur_gray_tech_req value >= 9 }}
+					# 		remove_situation_flag = repeat_research
+					# 	}
+					# } else_if = {
+					# 	limit = { check_variable = { which = gray_tech_id value = 1045 }}
+					# 	set_variable = { which = cur_gray_tech_req value = tech_repeat_nano_research_produce }
+					# 	if = {
+					# 		limit = { check_variable = { which = cur_gray_tech_req value >= 19 }}
+					# 		remove_situation_flag = repeat_research
+					# 	}
+					# } else_if = {
+					# 	limit = { check_variable = { which = gray_tech_id value = 2054 }}
+					# 	set_variable = { which = cur_gray_tech_req value = tech_repeat_nanoweapon }
+					# }
 					multiply_variable = { which = cur_gray_tech_req value = @gray_repeatable_tech_points_add }
 					change_variable = { which = cur_gray_tech_req value = @gray_repeatable_tech_base }
 				}
 				set_variable = { which = cur_gray_tech_req value = root.cur_gray_tech_req }
+				set_variable = { which = gray_repeatable_tech_limit value = root.gray_repeatable_tech_limit }
+				set_variable = { which = cur_repeatable_tech_lv value = root.cur_repeatable_tech_lv }
 				start_situation = { type = gray_research_situation target = this }
 				random_situation = {
 					limit = { 
@@ -404,7 +413,6 @@ situation_event = {
 		owner = {
 			set_variable = { which = cur_acc_nanotech_points value = root.cur_acc_nanotech_points }
 			set_variable = { which = gray_tech_id value = root.gray_tech_id }
-			kuat_get_digits = { ARRAY = stored_nanotech_points_array VARIABLE = gray_tech_id }
 			# 将已研究的点数储存到数列中（ARRAY为储存的数列名，VALUE为储存的数值（变量），VARIABLE为储存的索引（变量）
 			# 详见scripted_effect 中的array_effects.txt文件里的注释
 			kuat_set_array_variable = {
@@ -635,8 +643,16 @@ country_event = {
 		set_variable = { which = appox_month_gray_research_finish value = cur_gray_tech_req }
 		divide_variable = { which = appox_month_gray_research_finish value = nanotech_points_grow }
 		ceiling_variable = appox_month_gray_research_finish
+		set_gray_repeatable_tech_var = { ID = 1015 NAME = tech_repeat_nanite_produce }
+		set_gray_repeatable_tech_var = { ID = 1025 NAME = tech_repeat_nano_alloy_produce }
+		set_gray_repeatable_tech_var = { ID = 1035 NAME = tech_repeat_nano_consumer_goods_produce }
+		set_gray_repeatable_tech_var = { ID = 1045 NAME = tech_repeat_nano_research_produce }
+		set_gray_repeatable_tech_var = { ID = 3024 NAME = tech_repeat_nano_gestalt_network }
+		set_gray_repeatable_tech_var = { ID = 3042 NAME = tech_repeat_large_scale_network_manage }
 	}
-	after = { remove_country_flag = open_gray_research_comfirm_window }
+	after = {
+		remove_country_flag = open_gray_research_comfirm_window
+	}
 
 	option = {
 		name = "nanoresearch_points_require_text"

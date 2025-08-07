@@ -37,6 +37,7 @@ button_tech_repeat_consciousness_copy = {
         tech_level_var = tech_repeat_consciousness_copy
         repeat_tech_points_add = @gray_repeatable_tech_points_add
         repeat_tech_points_base = @gray_repeatable_tech_base
+        tech_limit = @gray_repeatable_tech_lv_limit_low
     }
 }
 button_tech_repeat_consciousness_sycn = {
@@ -47,6 +48,7 @@ button_tech_repeat_consciousness_sycn = {
         tech_level_var = tech_repeat_consciousness_sycn
         repeat_tech_points_add = @gray_repeatable_tech_points_add
         repeat_tech_points_base = @gray_repeatable_tech_base
+        tech_limit = @gray_repeatable_tech_lv_limit_low
     }
 }
 button_tech_consciousness_detach = {
@@ -85,6 +87,7 @@ button_tech_repeat_nano_gestalt_network = {
         tech_level_var = tech_repeat_nano_gestalt_network
         repeat_tech_points_add = @gray_repeatable_tech_points_add
         repeat_tech_points_base = @gray_repeatable_tech_base
+        tech_limit = @gray_repeatable_tech_lv_limit_low
     }
 }
 button_tech_building_nanite_bureaucratic = {
@@ -133,6 +136,7 @@ button_tech_repeat_large_scale_network_manage = {
         tech_level_var = tech_repeat_large_scale_network_manage
         repeat_tech_points_add = @gray_repeatable_tech_points_add
         repeat_tech_points_base = @gray_repeatable_tech_base
+        tech_limit = @gray_repeatable_tech_lv_limit_low
     }
 }
 button_tech_nano_exoskeletons = {
@@ -160,6 +164,7 @@ button_tech_repeat_nano_biostructure_enhance = {
     inline_script = {
         script = "button_effects/gray_repeat_tech_research_button"
         CAT = 2 ID = 3053
+        no_max_level = yes
         is_repeatable_tech = yes
         tech_level_var = tech_repeat_nano_biostructure_enhance
         repeat_tech_points_add = @gray_repeatable_tech_points_add

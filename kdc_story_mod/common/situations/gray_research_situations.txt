@@ -10,18 +10,16 @@ gray_research_situation = {
 	on_start = {
 		# 循环科技相关的变量（仅用于显示）
 		set_variable = { which = cur_acc_nanotech_points value = 0 }
-		set_variable = { which = tech_repeat_nanite_produce value = owner.tech_repeat_nanite_produce }
-		set_variable = { which = tech_repeat_nano_alloy_produce value = owner.tech_repeat_nano_alloy_produce }
-		set_variable = { which = tech_repeat_nano_consumer_goods_produce value = owner.tech_repeat_nano_consumer_goods_produce }
-		set_variable = { which = tech_repeat_nano_research_produce value = owner.tech_repeat_nano_research_produce }
-		set_variable = { which = tech_repeat_nanoweapon value = owner.tech_repeat_nanoweapon }
-		set_variable = { which = tech_repeat_nano_gestalt_network value = owner.tech_repeat_nano_gestalt_network }
-		set_variable = { which = tech_repeat_large_scale_network_manage value = owner.tech_repeat_large_scale_network_manage }
-		set_variable = { which = tech_repeat_nano_biostructure_enhance value = owner.tech_repeat_nano_biostructure_enhance }
-		
 		# 将数据转移到局势里，避免数据碰撞
 		set_variable = { which = cur_gray_tech_req value = owner.cur_gray_tech_req }
 		set_variable = { which = gray_tech_id value = owner.gray_tech_id }
+
+		if = {
+			limit = { owner = { has_country_flag = is_researching_repeatable_tech }}
+			set_situation_flag = is_researching_repeatable_tech
+			set_variable = { which = gray_repeatable_tech_limit value = owner.gray_repeatable_tech_limit }
+			set_variable = { which = cur_repeatable_tech_lv value = owner.cur_repeatable_tech_lv }
+		}
 
 		# cur_gray_tech_req = 当前科技所需点数
 		# 将之前研究多出的研究点数转移至此并清零
@@ -51,6 +49,9 @@ gray_research_situation = {
 		add_situation_progress = 0.01
 		# 研究进度提取
 		situation_event = { id = gray_tech.11 }
+		owner = {
+			remove_country_flag = is_researching_repeatable_tech
+		}
 	}
 	on_progress_complete = {	#Effects when Situation's progress has reached 100
 		custom_tooltip = gray_research_finish_effect
@@ -131,35 +132,8 @@ gray_research_situation = {
 		icon_background = GFX_situation_approach_bg_green
 		potential = {
 			NOT = { has_situation_flag = repeat_research }
-			OR = {
-				# 是循环科技的编号
-				AND = {
-					check_variable = { which = tech_repeat_nanite_produce value < 10 }
-					check_variable = { which = gray_tech_id value = 1015 }
-				}
-				AND = {
-					check_variable = { which = tech_repeat_nano_alloy_produce value < 10 }
-					check_variable = { which = gray_tech_id value = 1025 }
-				}
-				AND = {
-					check_variable = { which = tech_repeat_nano_consumer_goods_produce value < 10 }
-					check_variable = { which = gray_tech_id value = 1035 }
-				}
-				AND = {
-					check_variable = { which = tech_repeat_nano_research_produce value < 20 }
-					check_variable = { which = gray_tech_id value = 1045 }
-				}
-				AND = {
-					check_variable = { which = tech_repeat_nano_gestalt_network value < 10 }
-					check_variable = { which = gray_tech_id value = 3024 }
-				}
-				AND = {
-					check_variable = { which = tech_repeat_large_scale_network_manage value < 10 }
-					check_variable = { which = gray_tech_id value = 3042 }
-				}
-				check_variable = { which = gray_tech_id value = 3053 }
-				check_variable = { which = gray_tech_id value = 2054 }
-			}
+			has_situation_flag = is_researching_repeatable_tech
+			check_variable = { which = cur_repeatable_tech_lv value < gray_repeatable_tech_limit }
 		}
 		on_select = {
 			custom_tooltip = situation_gray_research_repeat_tooltip
@@ -175,6 +149,8 @@ gray_research_situation = {
 		icon_background = GFX_situation_approach_bg_red
 		potential = {
 			has_situation_flag = repeat_research
+			has_situation_flag = is_researching_repeatable_tech
+			check_variable = { which = cur_repeatable_tech_lv value < gray_repeatable_tech_limit }
 		}
 		on_select = {
 			custom_tooltip = situation_gray_research_repeat_cancel_tooltip

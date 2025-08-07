@@ -1,6 +1,6 @@
 building_nano_assembly_plant = {
 	base_buildtime = 240
-	base_cap_amount = 1
+	planet_limit = 1
 	category = pop_assembly
 
 	building_sets = {
@@ -734,7 +734,7 @@ building_gray_nanite_factory2 = {
 
 building_nanite_field_manipulator = {
 	base_buildtime = 1500
-	base_cap_amount = 1	
+	planet_limit = 1
 	can_demolish = no
 	can_be_ruined = no
 	can_be_disabled = no
@@ -865,7 +865,7 @@ building_gray_nano_rare_resource_factory = {
 
 building_nano_reconstructor = {
 	base_buildtime = 1000
-	base_cap_amount = 1	
+	planet_limit = 1
 	can_demolish = no
 	can_be_ruined = no
 	can_be_disabled = no
@@ -1136,7 +1136,7 @@ building_gray_fortress2 = {
 
 building_gray_nano_defence_centre = {
 	base_buildtime = 1000
-	base_cap_amount = 1
+	planet_limit = 1
 	can_demolish = no
 	can_be_ruined = no
 	can_be_disabled = no
@@ -1237,7 +1237,7 @@ building_gray_nanite_mining = {
 
 building_gray_nano_regenerator = {
 	base_buildtime = 1200
-	base_cap_amount = 1
+	planet_limit = 1
 	can_demolish = no
 	can_be_ruined = no
 	can_be_disabled = no
@@ -1285,7 +1285,7 @@ building_gray_nano_regenerator = {
 building_gray_energy_enhance = {
 	base_buildtime = 400
 	category = resource
-	base_cap_amount = 1
+	planet_limit = 1
 	building_sets = {
 		origin
 		generator
@@ -1324,7 +1324,7 @@ building_gray_energy_enhance = {
 building_gray_minerals_enhance = {
 	base_buildtime = 400
 	category = resource
-	base_cap_amount = 1
+	planet_limit = 1
 	building_sets = {
 		origin
 		mining
@@ -1363,7 +1363,7 @@ building_gray_minerals_enhance = {
 building_gray_nanite_enhance = {
 	base_buildtime = 400
 	category = resource
-	base_cap_amount = 1
+	planet_limit = 1
 	building_sets = {
 		origin
 		mining

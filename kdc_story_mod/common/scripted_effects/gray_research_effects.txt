@@ -36,6 +36,8 @@ default_gray_research_button_effect = {
 		if = {
 			limit = { has_gray_tech_$ID$_trigger = no }
 			hidden_effect = {
+				remove_country_flag = is_researching_repeatable_tech
+				clear_variable = gray_repeatable_tech_limit
 				set_variable = { which = gray_tech_id value = $ID$ }
 				if = {
 					limit = { always = $research_use_days|yes$ }
@@ -59,9 +61,11 @@ default_gray_research_button_effect = {
 # （选填）level1_tech_points: 二级需求纳米研究点数
 # （选填）level2_tech_points: 三级需求纳米研究点数
 
+# is_repeatable_tech: 填yes即为循环科技，并需要填入以下参数
 # 循环科技参数：以下两项参数选填，并且一旦填入必须两项参数都填
 # repeat_tech_points_add: 循环科技每级增加的研究点数
 # repeat_tech_points_base: 循环科技基础需求研究点数
+# tech_limit: 循环科技最大等级
 
 # no_max_level: 填yes等于无限等级
 # 提示tooltip本地化必须改成tech_$ID$_tooltip格式
@@ -77,12 +81,22 @@ repeat_tech_gray_research_button_effect = {
 				}
 			}
 			hidden_effect = {
+				remove_country_flag = is_researching_repeatable_tech
+				clear_variable = gray_repeatable_tech_limit
+				clear_variable = cur_repeatable_tech_lv
 				set_variable = { which = gray_tech_id value = $ID$ }
 				if = {
 					limit = { always = $is_repeatable_tech|no$ }
 					set_variable = { which = cur_gray_tech_req value = $repeat_tech_points_add|0$ }
 					multiply_variable = { which = cur_gray_tech_req value = $tech_level_var|0$ }
 					change_variable = { which = cur_gray_tech_req value = $repeat_tech_points_base|0$ }
+					set_country_flag = is_researching_repeatable_tech
+					if = {
+						limit = { always = $no_max_level|no$ }
+						set_variable = { which = gray_repeatable_tech_limit value = 9999 }
+					} else = {
+						set_variable = { which = gray_repeatable_tech_limit value = $tech_limit$ }
+					}
 				} else = {
 					if = {
 						limit = { check_variable = { which = $tech_level_var|nan$ value = 0 }}
@@ -101,6 +115,14 @@ repeat_tech_gray_research_button_effect = {
 			}
 		}
 		else = { custom_tooltip = "repeatable_technology_max"}
+	}
+}
+
+set_gray_repeatable_tech_var = {
+	if = {
+		limit = { check_variable = { which = gray_tech_id value = $ID$ }}
+		set_variable = { which = cur_repeatable_tech_lv value = $NAME$ }
+		break = yes
 	}
 }
 

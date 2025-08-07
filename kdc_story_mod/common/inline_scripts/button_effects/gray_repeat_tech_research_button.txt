@@ -16,5 +16,6 @@ effect = {
         repeat_tech_points_add = $repeat_tech_points_add$
         repeat_tech_points_base = $repeat_tech_points_base$
         no_max_level = $no_max_level$
+        tech_limit = $tech_limit$
     }
 }

@@ -1,88 +1,88 @@
 defined_text = {
 	name = GetGrayTechEffect
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1000 }}
-		localization_key = tech_TMR_nanite_productor_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1000 NAME = tech_TMR_nanite_productor
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1010 }}
-		localization_key = tech_building_nanoassembly_plant_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1010 NAME = tech_building_nanoassembly_plant
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1011 }}
-		localization_key = tech_nanoassembly_technology_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1011 NAME = tech_nanoassembly_technology
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1013 }}
-		localization_key = tech_nano_reconstruct_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1013 NAME = tech_nano_reconstruct
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1014 }}
-		localization_key = tech_building_nanite_field_manipulator_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1014 NAME = tech_building_nanite_field_manipulator
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1015 }}
-		localization_key = tech_repeat_nanite_produce_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1015 NAME = tech_repeat_nanite_produce
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1016 }}
-		localization_key = tech_building_gray_nanite_factory_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1016 NAME = tech_building_gray_nanite_factory
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1017 }}
-		localization_key = tech_building_gray_nanite_factory2_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1017 NAME = tech_building_gray_nanite_factory2
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1018 }}
-		localization_key = tech_building_gray_nano_regenerator_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1018 NAME = tech_building_gray_nano_regenerator
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1020 }}
-		localization_key = tech_building_gray_nano_foundry_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1020 NAME = tech_building_gray_nano_foundry
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1021 }}
-		localization_key = tech_building_gray_nano_rare_resource_factory_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1021 NAME = tech_building_gray_nano_rare_resource_factory
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1022 }}
-		localization_key = tech_building_gray_nano_foundry2_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1022 NAME = tech_building_gray_nano_foundry2
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1024 }}
-		localization_key = tech_nano_job_foundry_upgrade_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1024 NAME = tech_nano_job_foundry_upgrade
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1025 }}
-		localization_key = tech_repeat_nano_alloy_produce_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1025 NAME = tech_repeat_nano_alloy_produce
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1030 }}
-		localization_key = tech_building_gray_nano_factory_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1030 NAME = tech_building_gray_nano_factory
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1031 }}
-		localization_key = tech_building_gray_nano_factory2_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1031 NAME = tech_building_gray_nano_factory2
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1034 }}
-		localization_key = tech_nano_job_artisan_upgrade_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1034 NAME = tech_nano_job_artisan_upgrade
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1035 }}
-		localization_key = tech_repeat_nano_consumer_goods_produce_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1035 NAME = tech_repeat_nano_consumer_goods_produce
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1040 }}
-		localization_key = tech_building_gray_nano_research_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1040 NAME = tech_building_gray_nano_research
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1041 }}
-		localization_key = tech_building_gray_nano_research2_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1041 NAME = tech_building_gray_nano_research2
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1042 }}
-		localization_key = tech_building_gray_nano_research3_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1042 NAME = tech_building_gray_nano_research3
 	}
 	text = {
 		trigger = { OR = {
@@ -91,97 +91,97 @@ defined_text = {
 		}}
 		localization_key = tech_nano_research_slot_effect
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1045 }}
-		localization_key = tech_repeat_nano_research_produce_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1045 NAME = tech_repeat_nano_research_produce
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1060 }}
-		localization_key = tech_nano_construction_core_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1060 NAME = tech_nano_construction_core
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1061 }}
-		localization_key = tech_nano_dyson_sphere_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1061 NAME = tech_nano_dyson_sphere
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1062 }}
-		localization_key = tech_nano_matter_decompressor_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1062 NAME = tech_nano_matter_decompressor
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1063 }}
-		localization_key = tech_nano_ring_world_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1063 NAME = tech_nano_ring_world
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1064 }}
-		localization_key = tech_nano_science_nexus_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1064 NAME = tech_nano_science_nexus
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1070 }}
-		localization_key = tech_macro_nanorobot_technology_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1070 NAME = tech_macro_nanorobot_technology
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1071 }}
-		localization_key = tech_TMR_nanite_factory_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1071 NAME = tech_TMR_nanite_factory
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1072 }}
-		localization_key = tech_TMR_gatebuilder_core_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1072 NAME = tech_TMR_gatebuilder_core
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 1073 }}
-		localization_key = tech_R_gateway_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 1073 NAME = tech_R_gateway
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2000 }}
-		localization_key = tech_gray_nano_reactor_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2000 NAME = tech_gray_nano_reactor
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2001 }}
-		localization_key = tech_gray_nanite_ia_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2001 NAME = tech_gray_nanite_ia
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2002 }}
-		localization_key = tech_gray_weapon_p_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2002 NAME = tech_gray_weapon_p
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2003 }}
-		localization_key = tech_gray_weapon_g_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2003 NAME = tech_gray_weapon_g
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2004 }}
-		localization_key = tech_gray_weapon_h_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2004 NAME = tech_gray_weapon_h
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2011 }}
-		localization_key = tech_gray_nano_propulsion_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2011 NAME = tech_gray_nano_propulsion
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2012 }}
-		localization_key = tech_gray_nano_jump_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2012 NAME = tech_gray_nano_jump
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2013 }}
-		localization_key = tech_gray_nano_sensors_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2013 NAME = tech_gray_nano_sensors
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2014 }}
-		localization_key = tech_gray_nano_computer_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2014 NAME = tech_gray_nano_computer
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2015 }}
-		localization_key = tech_gray_nano_armor_hardener_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2015 NAME = tech_gray_nano_armor_hardener
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2016 }}
-		localization_key = tech_gray_nano_shield_recharger_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2016 NAME = tech_gray_nano_shield_recharger
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2021 }}
-		localization_key = tech_planet_killer_graygoo_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2021 NAME = tech_planet_killer_graygoo
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2022 }}
-		localization_key = tech_gray_nano_aura_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2022 NAME = tech_gray_nano_aura
 	}
 	text = {
 		trigger = { check_variable = { which = gray_tech_id value = 2031 }}
@@ -199,148 +199,148 @@ defined_text = {
 		trigger = { check_variable = { which = gray_tech_id value = 2034 }}
 		localization_key = TECH_NANITECROP_SENTRY_TITLE
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2040 }}
-		localization_key = tech_gray_weapon_SML_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2040 NAME = tech_gray_weapon_SML
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2041 }}
-		localization_key = tech_gray_weapon_l_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2041 NAME = tech_gray_weapon_l
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2042 }}
-		localization_key = tech_gray_weapon_x_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2042 NAME = tech_gray_weapon_x
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2043 }}
-		localization_key = tech_gray_weapon_t_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2043 NAME = tech_gray_weapon_t
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2044 }}
-		localization_key = tech_nanite_sentry_maingun_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2044 NAME = tech_nanite_sentry_maingun
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2051 }}
-		localization_key = tech_gray_weapon_el_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2051 NAME = tech_gray_weapon_el
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2052 }}
-		localization_key = tech_gray_weapon_ex_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2052 NAME = tech_gray_weapon_ex
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2053 }}
-		localization_key = tech_gray_weapon_et_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2053 NAME = tech_gray_weapon_et
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 2054 }}
-		localization_key = tech_repeat_nanoweapon_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 2054 NAME = tech_repeat_nanoweapon
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3000 }}
-		localization_key = tech_psionic_theory_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3000 NAME = tech_psionic_theory
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3010 }}
-		localization_key = tech_modularized_memory_injection_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3010 NAME = tech_modularized_memory_injection
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3011 }}
-		localization_key = tech_modularized_skill_injection_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3011 NAME = tech_modularized_skill_injection
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3012 }}
-		localization_key = tech_nano_cloning_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3012 NAME = tech_nano_cloning
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3013 }}
-		localization_key = tech_repeat_consciousness_copy_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3013 NAME = tech_repeat_consciousness_copy
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3014 }}
-		localization_key = tech_repeat_consciousness_sycn_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3014 NAME = tech_repeat_consciousness_sycn
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3020 }}
-		localization_key = tech_consciousness_detach_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3020 NAME = tech_consciousness_detach
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3021 }}
-		localization_key = tech_consciousness_backup_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3021 NAME = tech_consciousness_backup
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3022 }}
-		localization_key = tech_consciousness_create_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3022 NAME = tech_consciousness_create
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3023 }}
-		localization_key = tech_virtual_conscious_network_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3023 NAME = tech_virtual_conscious_network
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3024 }}
-		localization_key = tech_repeat_nano_gestalt_network_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3024 NAME = tech_repeat_nano_gestalt_network
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3030 }}
-		localization_key = tech_building_nanite_bureaucratic_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3030 NAME = tech_building_nanite_bureaucratic
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3031 }}
-		localization_key = tech_building_nanite_bureaucratic_2_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3031 NAME = tech_building_nanite_bureaucratic_2
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3032 }}
-		localization_key = tech_building_nanite_bureaucratic_3_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3032 NAME = tech_building_nanite_bureaucratic_3
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3040 }}
-		localization_key = tech_remote_nano_swarm_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3040 NAME = tech_remote_nano_swarm
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3041 }}
-		localization_key = tech_nano_bureaucrat_upgrade_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3041 NAME = tech_nano_bureaucrat_upgrade
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3042 }}
-		localization_key = tech_repeat_large_scale_network_manage_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3042 NAME = tech_repeat_large_scale_network_manage
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3050 }}
-		localization_key = tech_nano_exoskeletons_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3050 NAME = tech_nano_exoskeletons
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3051 }}
-		localization_key = tech_nano_biomechanics_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3051 NAME = tech_nano_biomechanics
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3052 }}
-		localization_key = tech_living_nano_construction_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3052 NAME = tech_living_nano_construction
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3053 }}
-		localization_key = tech_repeat_nano_biostructure_enhance_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3053 NAME = tech_repeat_nano_biostructure_enhance
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3060 }}
-		localization_key = tech_nano_drones_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3060 NAME = tech_nano_drones
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3061 }}
-		localization_key = tech_nano_army_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3061 NAME = tech_nano_army
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3062 }}
-		localization_key = tech_army_gray_mecha_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3062 NAME = tech_army_gray_mecha
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3070 }}
-		localization_key = tech_building_gray_nano_defence_centre_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3070 NAME = tech_building_gray_nano_defence_centre
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3071 }}
-		localization_key = tech_building_gray_fortress_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3071 NAME = tech_building_gray_fortress
 	}
-	text = {
-		trigger = { check_variable = { which = gray_tech_id value = 3072 }}
-		localization_key = tech_building_gray_fortress2_effect
+	inline_script = {
+		script = scripted_loc/gray_tech_effect
+		ID = 3072 NAME = tech_building_gray_fortress2
 	}
 }
