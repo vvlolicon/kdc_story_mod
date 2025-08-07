@@ -97,6 +97,7 @@ button_tech_repeat_nanite_produce = {
 		tech_level_var = tech_repeat_nanite_produce
 		repeat_tech_points_add = @gray_repeatable_tech_points_add
 		repeat_tech_points_base = @gray_repeatable_tech_base
+		tech_limit = @gray_repeatable_tech_lv_limit_low
 	}
 }
 button_tech_building_gray_nano_foundry = {
@@ -138,6 +139,7 @@ button_tech_repeat_nano_alloy_produce = {
 		tech_level_var = tech_repeat_nanite_produce
 		repeat_tech_points_add = @gray_repeatable_tech_points_add
 		repeat_tech_points_base = @gray_repeatable_tech_base
+		tech_limit = @gray_repeatable_tech_lv_limit_low
 	}
 }
 
@@ -173,6 +175,7 @@ button_tech_repeat_nano_consumer_goods_produce = {
 		tech_level_var = tech_repeat_nanite_produce
 		repeat_tech_points_add = @gray_repeatable_tech_points_add
 		repeat_tech_points_base = @gray_repeatable_tech_base
+		tech_limit = @gray_repeatable_tech_lv_limit_low
 	}
 }
 button_tech_building_gray_nano_research = {
@@ -215,6 +218,7 @@ button_tech_repeat_nano_research_produce = {
 		tech_level_var = tech_repeat_nano_research_produce
 		repeat_tech_points_add = @gray_repeatable_tech_points_add
 		repeat_tech_points_base = @gray_repeatable_tech_base
+		tech_limit = 20
 	}
 }
 button_tech_nano_construction_core = {

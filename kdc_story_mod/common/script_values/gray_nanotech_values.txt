@@ -20,5 +20,5 @@ gray_nanotech_points = {
     add = nanotech_points_from_pop
     add = nanotech_points_from_mega
     mult = value:gray_nanotech_points_country_mult
-    round = yes
+    floor = yes
 }
