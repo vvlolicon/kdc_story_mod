@@ -154,6 +154,7 @@ decision_advance_graygoo_planet = {
 			gray_relic_world_get_variable_effect = {
 				DISTRICT = district_city  VARIABLE = num_district_city
 			}
+			gray_arcology_get_capital_building_lv_effect = yes
 			change_pc = pc_wg_graygoo
 			remove_all_districts = yes
 			clear_planet_modifiers = yes
@@ -161,6 +162,7 @@ decision_advance_graygoo_planet = {
 			while = { count = num_district_city
 				add_district = district_arcology_graygoo_housing
 			}
+			gray_arcology_set_capital_lv_effect = yes
 			set_planet_entity = {
 				entity = "wg_gray_goo_planet_01_entity"
 			}
@@ -210,6 +212,7 @@ decision_advance_graygoo_planet_relic = {
 			gray_relic_world_get_variable_effect = {
 				DISTRICT = district_city  VARIABLE = num_district_city
 			}
+			gray_arcology_get_capital_building_lv_effect = yes
 			change_pc = pc_wg_graygoo
 			remove_all_districts = yes
 			clear_planet_modifiers = yes
@@ -217,6 +220,7 @@ decision_advance_graygoo_planet_relic = {
 			while = { count = num_district_city
 				add_district = district_arcology_graygoo_housing
 			}
+			gray_arcology_set_capital_lv_effect = yes
 			set_planet_entity = {
 				entity = "wg_gray_goo_planet_01_entity"
 			}

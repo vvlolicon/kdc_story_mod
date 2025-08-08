@@ -3922,6 +3922,8 @@ planet_event = {
 
 	option = {
 		name = EXCELLENT
+		add_modifier = { modifier = gray_arcology_modify_buff years = 5 }
+		custom_tooltip = gray_arcology_modify_buff_desc
 	}
 }
 

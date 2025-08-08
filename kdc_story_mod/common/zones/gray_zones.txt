@@ -35,7 +35,7 @@ zone_gray_factory = {
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
-        exists = owner
+        hidden_trigger = { exists = owner }
         owner = {
             country_uses_consumer_goods = yes
             has_technology = tech_building_gray_nano_factory
@@ -59,10 +59,10 @@ zone_gray_factory = {
 zone_gray_foundry = {
     icon = GFX_colony_type_foundry
     inline_script = zones/shared_gray_zones_settings
+
     unlock = { # planet scope
         hidden_trigger = { exists = owner }
         owner = {
-            is_wilderness_empire = no
             has_technology = tech_building_gray_nano_foundry
         }
     }
@@ -87,7 +87,6 @@ zone_gray_research = {
     unlock = { # planet scope
         hidden_trigger = { exists = owner }
         owner = {
-            is_wilderness_empire = no
             has_technology = tech_building_gray_nano_research
         }
     }
@@ -111,9 +110,8 @@ zone_gray_unity = {
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
-        exists = owner
+        hidden_trigger = { exists = owner }
         owner = {
-            is_wilderness_empire = no
             has_technology = tech_building_nanite_bureaucratic
         }
     }
@@ -137,9 +135,8 @@ zone_gray_soldier = {
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
-        exists = owner
+        hidden_trigger = { exists = owner }
         owner = {
-            is_wilderness_empire = no
             has_technology = tech_building_gray_fortress
         }
     }
@@ -153,6 +150,69 @@ zone_gray_soldier = {
         script = jobs/zone_gray_jobs_add
         JOB = gray_nano_soldier
         AMOUNT = 100
+    }
+
+    inline_script = zones/gray_zones_housing_modifiers
+}
+zone_gray_nanites = {
+    icon = GFX_resource_sr_nanites_large
+    base_buildtime = @zone_buildtime
+
+    potential = { # planet scope
+        hidden_trigger = {
+            exists = owner
+            owner = {
+                is_wilderness_empire = no
+                gray_country_trigger = yes
+            }
+            NOT = { uses_district_set = pc_wg_graygoo}
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            has_technology = tech_building_gray_nanite_factory
+        }
+    }
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+            nanites = @gray_zone_nanites_cost
+        }
+    }
+
+
+    inline_script = {
+        script = jobs/zone_gray_jobs_add
+        JOB = gray_nanite_manufacturer
+        AMOUNT = 200
+    }
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            colony_type = col_graygoo_nanites
+        }
+        job_gray_nanite_manufacturer_add = 100
+    }
+
+    zone_sets = {
+        urban
+        habitat_urban
+        arcology
+        ring_world
+    }
+
+    included_building_sets = {
+        industrial
+        automation
+        origin
+    }
+
+    planet_modifier = {
+        zone_building_slots_add = 3
     }
 
     inline_script = zones/gray_zones_housing_modifiers

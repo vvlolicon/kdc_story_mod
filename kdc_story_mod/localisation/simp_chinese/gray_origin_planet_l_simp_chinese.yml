@@ -88,3 +88,6 @@
  zone_gray_arcology_nanites: "纳米矿井群"
  zone_gray_arcology_nanites_plural: "$zone_gray_arcology_nanites$"
  zone_gray_arcology_nanites_desc: "部署了大量密集的纳米矿井的区域，以便大规模开采行星深处的纳米机械资源。"
+ zone_gray_nanites: "纳米机械产园"
+ zone_gray_nanites_plural: "$zone_gray_nanites$"
+ zone_gray_nanites_desc: "在这星罗棋布的产业园区里，是一台台无比精密的纳米机器生产厂房，生产着无数足以称为帝国血液的纳米机械人"

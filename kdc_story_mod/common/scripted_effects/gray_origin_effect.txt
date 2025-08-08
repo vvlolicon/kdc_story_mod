@@ -78,3 +78,79 @@ gray_relic_world_get_variable_effect = {
 	divide_variable = { which = $VARIABLE$ value = 2 }
 	floor_variable = $VARIABLE$
 }
+
+gray_arcology_get_capital_building_lv_effect = {
+	if = {
+		limit = { has_fully_upgraded_capital = yes }
+		set_variable = { which = capital_lv value = 3 }
+	}
+	else_if = {
+		limit = { has_major_upgraded_capital = yes }
+		set_variable = { which = capital_lv value = 2 }
+	}
+	else_if = {
+		limit = { has_upgraded_capital = yes }
+		set_variable = { which = capital_lv value = 1 }
+	}
+}
+
+gray_arcology_set_capital_lv_effect = {
+	if = {
+		limit = { check_variable = { which = capital_lv value = 3 }}
+		remove_building = building_colony_shelter
+		if = {
+			limit = { owner = { is_machine_empire = yes }}
+			if = {
+				limit = { owner = { is_galactic_emperor = yes }}
+				add_building = building_imperial_machine_capital
+			}
+			else = { add_building = building_machine_system_capital }
+		}
+		else_if = {
+			limit = { owner = { is_hive_empire = yes }}
+			if = {
+				limit = { owner = { is_galactic_emperor = yes }}
+				add_building = building_hive_major_capital
+			}
+			else = { add_building = building_imperial_hive_capital }
+		}
+		else = {
+			if = {
+				limit = { owner = { is_hive_empire = yes }}
+				add_building = building_imperial_capital
+			}
+			else = { add_building = building_system_capital }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { which = capital_lv value = 2 }}
+		remove_building = building_colony_shelter
+		if = {
+			limit = { owner = { is_machine_empire = yes }}
+			add_building = building_machine_major_capital
+		}
+		else_if = {
+			limit = { owner = { is_hive_empire = yes }}
+			add_building = building_hive_major_capital
+		}
+		else = {
+			add_building = building_major_capital
+		}
+	}
+	else_if = {
+		limit = { check_variable = { which = capital_lv value = 1 }}
+		set_variable = { which = capital_lv value = 1 }
+		remove_building = building_colony_shelter
+		if = {
+			limit = { owner = { is_machine_empire = yes }}
+			add_building = building_machine_capital
+		}
+		else_if = {
+			limit = { owner = { is_hive_empire = yes }}
+			add_building = building_hive_capital
+		}
+		else = {
+			add_building = building_capital
+		}
+	}
+}

@@ -90,6 +90,8 @@
  gray_chaos_pop_desc: "由于突如其来的大规模天灾，大部分民众都陷入了混乱之中，无数人的家园也被摧毁，等候重建"
  gray_unstoppable_tectonics: "无法控制的地质活动"
  gray_unstoppable_tectonics_desc: "因为我们擅自对这颗星球上的纳米地质框架粗暴地干涉的原因，它已经无法正常维持正常星球板块的功能，这颗星球上的地质活动将越发频繁。"
+ gray_arcology_modify_buff: "新建理想城"
+ gray_arcology_modify_buff_desc: "由于蠢驴这个sb，mod理想城改球会把建筑全变不见了，所以加个buff给你，赶紧把建筑补全吧。"
 
 # origin
  origin_gray: "远星之歌"
