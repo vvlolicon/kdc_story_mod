@@ -447,6 +447,7 @@ nanitecrop_sentry = {
 		ship_fire_rate_mult = 1.0
 		ship_tracking_add = 25
 		ship_accuracy_add = 25
+		kuat_flagship_system_catagories = 2
 	}
 	max_hitpoints = 1000000
 	size_multiplier = 30

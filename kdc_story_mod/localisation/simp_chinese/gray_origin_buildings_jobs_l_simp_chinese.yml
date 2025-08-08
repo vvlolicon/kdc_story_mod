@@ -145,7 +145,7 @@
  building_nano_reconstructor_effect_desc: "星球上每100个人口将会为此建筑生产§G0.3§!£nanites£ §Y$nanites$§!，并增加§R1§!£energy£ §Y$energy$§!消耗"
 
  building_gray_nano_research_elite: "【超级建筑】§E菁英纳米开发所§!"
- building_gray_nano_research_elite_effect: "§Y$job_gray_nano_researcher$§!产生的纳米研究点:§G+50%§!\n$job_gray_nano_researcher$职业:§G+15§!"
+ building_gray_nano_research_elite_country_effect: "$mod_pop_jobs_nano_research_points_mult$: §G+50%§!"
  building_gray_nano_research_elite_desc: "作为全国最顶尖纳米领域的开发中心，这里将汇聚所有处于前沿的科研人员以及最先进的科研设备，力图发掘所有关于纳米领域的潜力。"
 
  building_gray_fortress: "纳米堡垒"
@@ -158,3 +158,6 @@
  building_gray_nanite_mining: "纳米采矿站"
  building_gray_nanite_mining_desc: "一个平平无奇的开采纳米机械的大型矿点。"
  mod_pop_pc_graygoo_nanite_manufacturer_bonus_workforce_mult: "$job_pc_graygoo_nanite_manufacturer$的工作效率"
+
+ building_gray_nano_resident: "纳米居住服务中心"
+ building_gray_nano_resident_desc: "这栋建筑通过其独有的区域气候调节系统，配合空间操纵技术，在确保人均居住空间的同时优化居住环境，摧枯拉朽地解决殖民地一切住房和舒适方面的需求。"

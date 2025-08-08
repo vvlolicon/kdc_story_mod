@@ -247,6 +247,11 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
 	spriteType = {
+		name = "GFX_gray_research_ap_micromechanical_revolution_cat2"
+		texturefile = "gfx/interface/gray_research/ap_micromechanical_revolution_cat2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
 		name = "GFX_gray_research_ap_graygoo_mega_and_micromechanic"
 		texturefile = "gfx/interface/gray_research/ap_graygoo_mega_and_micromechanic.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
@@ -687,6 +692,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_tech_building_gray_nano_regenerator"
 		texturefile = "gfx/interface/gray_research/tech_cat_1/tech_building_gray_nano_regenerator.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+	spriteType = {
+		name = "GFX_tech_dark_matter_power_core"
+		texturefile = "gfx/interface/gray_research/tech_cat_2/tech_dark_matter_power_core.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+	spriteType = {
+		name = "GFX_tech_building_gray_nano_resident"
+		texturefile = "gfx/interface/gray_research/tech_cat_3/tech_building_gray_nano_resident.dds"
 		effectFile = "gfx/FX/buttonstate.shader"
 	}
 }

@@ -274,6 +274,11 @@ button_icon_tech_nanite_sentry_maingun = {
 	allow = {}
 	effect = {}
 }
+button_icon_tech_dark_matter_power_core = {
+	potential = { from = { check_variable = { which = gray_tech_id value = 2050 }}}
+	allow = {}
+	effect = {}
+}
 button_icon_tech_gray_weapon_el = {
 	potential = { from = { check_variable = { which = gray_tech_id value = 2051 }}}
 	allow = {}
@@ -429,3 +434,9 @@ button_icon_tech_building_gray_fortress2 = {
 	allow = {}
 	effect = {}
 }
+button_icon_tech_building_gray_nano_resident = {
+	potential = { from = { check_variable = { which = gray_tech_id value = 3073 }}}
+	allow = {}
+	effect = {}
+}
+

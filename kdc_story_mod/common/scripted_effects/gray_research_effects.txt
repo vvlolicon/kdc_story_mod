@@ -38,6 +38,7 @@ default_gray_research_button_effect = {
 			hidden_effect = {
 				remove_country_flag = is_researching_repeatable_tech
 				clear_variable = gray_repeatable_tech_limit
+				clear_variable = cur_repeatable_tech_lv
 				set_variable = { which = gray_tech_id value = $ID$ }
 				if = {
 					limit = { always = $research_use_days|yes$ }

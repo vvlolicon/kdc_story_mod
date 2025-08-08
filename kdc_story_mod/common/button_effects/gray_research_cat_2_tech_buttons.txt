@@ -158,6 +158,20 @@ button_tech_nanite_sentry_maingun = {
 		tech_points = @gray_t7_tech_points
 	}
 }
+button_tech_dark_matter_power_core = {
+	inline_script = {
+		script = "button_effects/gray_research_tech_button"
+		CAT = 1 ID = 2050
+		tech_points = @gray_t7_tech_points
+	}
+}
+button_tech_gray_weapon_el = {
+	inline_script = {
+		script = "button_effects/gray_research_tech_button"
+		CAT = 1 ID = 2051
+		tech_points = @gray_t5_tech_points
+	}
+}
 button_tech_gray_weapon_el = {
 	inline_script = {
 		script = "button_effects/gray_research_tech_button"

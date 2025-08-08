@@ -653,6 +653,14 @@ guiTypes = {
 			effect = "button_icon_tech_repeat_nanoweapon"
 			alwaysTransparent = yes
 		}
+		effectButtonType = {
+			name = "icon_tech_dark_matter_power_core"
+			quadTextureSprite = "GFX_tech_dark_matter_power_core"
+			orientation = "UPPER_LEFT"
+			position = { x = @tech_icon_x y = @tech_icon_y }
+			effect = "button_icon_tech_dark_matter_power_core"
+			alwaysTransparent = yes
+		}
 		#########################################################
 		# 社会科技图标
 		#########################################################
@@ -870,6 +878,14 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			position = { x = @tech_icon_x y = @tech_icon_y }
 			effect = "button_icon_tech_building_gray_fortress2"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = "icon_tech_building_gray_nano_resident"
+			quadTextureSprite = "GFX_tech_building_gray_nano_resident"
+			orientation = "UPPER_LEFT"
+			position = { x = @tech_icon_x y = @tech_icon_y }
+			effect = "button_icon_tech_building_gray_nano_resident"
 			alwaysTransparent = yes
 		}
 

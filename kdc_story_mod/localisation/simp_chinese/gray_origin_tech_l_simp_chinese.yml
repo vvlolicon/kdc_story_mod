@@ -364,6 +364,11 @@
  tech_nanite_sentry_maingun_effect: "$gray_tech_unlock_comp$£comp_icon_t£$nanite_sentry_maingun$"
  gray_tech_2044_tooltip: "£physics_research£$tech_nanite_sentry_maingun$\n\n$tech_nanite_sentry_maingun_effect$"
 
+ tech_gray_dark_matter_power_core: "暗物质能源研究"
+ tech_gray_dark_matter_power_core_desc: "一直以来，暗物质能源的利用都是堕落帝国的专利。暗物质无处不在，却又蕴含着这个宇宙中最庞大的能源。而最近我们在微观领域科技的发展，令我们得以窥探暗物质产生能源的秘密。\n破解暗物质能源的关键，在于利用拓扑纳米材料构建一种特殊的能量共振纳米结构。这种结构的核心是其内部受控的量子晶格场。通过在原子尺度上精确生成微观引力能量阱，我们得以强行约束并引导原本难以捉摸的暗物质能量流，使其定向冲击这些纳米结构，触发受控的湮灭反应。最后，通过我们更高效的纳米能量转换核心，将这些湮灭反应释放的巨大能量稳定地转化为可控的电力。\n这项技术性突破，不仅仅是通往无限能源的敲门砖，更是集纳米科技与材料学之大成的登峰造极之作。"
+ tech_gray_dark_matter_power_core_effect: "获得科技: £physics_research£['technology:tech_dark_matter_power_core']"
+ gray_tech_2050_tooltip: "£physics_research£$tech_gray_dark_matter_power_core$\n\n$tech_gray_dark_matter_power_core_effect$"
+
  tech_gray_weapon_el: "$gray_weapon_el$"
  tech_gray_weapon_el_desc: "在暗物质的辅助下，我们能够将旧能量炮的射速和破坏力提升一倍以上，迅速撕碎大批来袭舰队。"
  tech_gray_weapon_el_effect: "$gray_tech_unlock_comp$£comp_icon_l£$gray_weapon_el$"
@@ -380,10 +385,10 @@
  gray_tech_2053_tooltip: "£physics_research£$tech_gray_weapon_et$\n\n$tech_gray_weapon_et_effect$"
 
  ######################## 生物科技
- tech_psionic_theory: "灵能理论初步研究"
- tech_psionic_theory_desc: "即使穷尽纳米技术，我们也不可能在现实中创造两块一模一样的石头，这是由于我们还无法突破比基本粒子更小的物质载体的编辑技术，这涉及到了更高维度的弦理论。虽然我们对弦理论和高维理论的认识不足，但我们可以利用一些取巧的技术来突破这些限制，这便是灵能理论。\n灵能界普遍存在于现实维度于高纬之间的亚空间维度，而最常见的维度之间的通道便是星界裂缝。只要我们知道正确的方法，通过时空定位和一点点的力量，我们就能撬动通往灵能的大门。"
- tech_psionic_theory_effect: "获得科技: £society_research£['technology:tech_psionic_theory']"
- gray_tech_3000_tooltip: "£society_research£$tech_psionic_theory$\n\n$tech_psionic_theory_effect$"
+ tech_gray_psionic_theory: "灵能理论初步研究"
+ tech_gray_psionic_theory_desc: "即使穷尽纳米技术，我们也不可能在现实中创造两块一模一样的石头，这是由于我们还无法突破比基本粒子更小的物质载体的编辑技术，这涉及到了更高维度的弦理论。虽然我们对弦理论和高维理论的认识不足，但我们可以利用一些取巧的技术来突破这些限制，这便是灵能理论。\n灵能界普遍存在于现实维度于高纬之间的亚空间维度，而最常见的维度之间的通道便是星界裂缝。只要我们知道正确的方法，通过时空定位和一点点的力量，我们就能撬动通往灵能的大门。"
+ tech_gray_psionic_theory_effect: "获得科技: £society_research£['technology:tech_psionic_theory']"
+ gray_tech_3000_tooltip: "£society_research£$tech_gray_psionic_theory$\n\n$tech_gray_psionic_theory_effect$"
 
  tech_modularized_memory_injection: "模块化记忆植入 §H[owner.GetGrayTech3010Lv]§!"
  tech_modularized_memory_injection_desc: "既然意识可以从身体中分离出去，那么对意识以及记忆的操作就比还是以前的碳基生物时简单的太多了。我们可以往一个人的记忆中植入一些知识，使得其瞬间精通一个人从前需要数十年才能掌握的基础知识，来批量制造天才。"
@@ -464,9 +469,9 @@
  tech_nano_bureaucrat_upgrade: "自动化系统管理 [owner.GetGrayTech3041Lv]"
  tech_nano_bureaucrat_upgrade_desc: "自动化一直是我们一直要面对的难题。进入星海之后，从前我们只可观而不可用的天文大数以及研究纳米科技之后变得极其微小的单位，还有两者之间的应用的数字量级之差对我们计算机技术的精度，储存和规模提出了多重挑战。现在，我们需要面对这些难题并解决它。"
  tech_nano_bureaucrat_upgrade_effect: "[owner.GetGrayTech3041Effect]"
- tech_nano_bureaucrat_upgrade_effect_lv1: "§H$job_gray_nano_bureaucrat$§! £unity£$unity$产出§G+2§!，每月£nanites£$nanites$维护费§R+2§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-1§!。"
- tech_nano_bureaucrat_upgrade_effect_lv2: "§H$job_gray_nano_bureaucrat$§! £unity£$unity$产出§G+2§!，每月£nanites£$nanites$维护费§R+2§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-1§!。"
- tech_nano_bureaucrat_upgrade_effect_lv3: "§H$job_gray_nano_bureaucrat$§! £unity£$unity$产出§G+3§!，每月£nanites£$nanites$维护费§R+4§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-2§!。\n$job_gray_nano_soldier$每月£nanites£$nanites$维护费§R+4§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-2§!。"
+ tech_nano_bureaucrat_upgrade_effect_lv1: "§H$job_gray_nano_bureaucrat$§!: \n  —£unity£$unity$产出§G+2§!，每月£nanites£$nanites$维护费§R+2§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-1§!。"
+ tech_nano_bureaucrat_upgrade_effect_lv2: "§H$job_gray_nano_bureaucrat$§!: \n  —£unity£$unity$产出§G+2§!，每月£nanites£$nanites$维护费§R+2§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-1§!。"
+ tech_nano_bureaucrat_upgrade_effect_lv3: "§H$job_gray_nano_bureaucrat$§!: \n  —£unity£$unity$产出§G+3§!，每月£nanites£$nanites$维护费§R+4§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-2§!。\n§H$job_gray_nano_soldier$§!: \n  —每月£nanites£$nanites$维护费§R+4§!、£energy£$energy$和£consumer_goods£$consumer_goods$维护费§G-2§!。"
  gray_tech_3041_tooltip: "£society_research£$tech_nano_bureaucrat_upgrade$\n\n$tech_nano_bureaucrat_upgrade_effect$"
 
  tech_repeat_large_scale_network_manage: "大规模网络协同管理§H[owner.tech_repeat_large_scale_network_manage]§!级"
@@ -531,6 +536,10 @@
  tech_building_gray_fortress2_effect: "$gray_tech_unlock_building$['building:building_gray_fortress2']"
  gray_tech_3072_tooltip: "£society_research£$building_gray_fortress2$\n\n$tech_building_gray_fortress2_effect$"
 
+ tech_building_gray_nano_resident: "$building_gray_nano_resident$"
+ tech_building_gray_nano_resident_desc: "$building_gray_nano_resident_desc$"
+ tech_building_gray_nano_resident_effect: "$gray_tech_unlock_building$['building:building_gray_nano_resident']"
+ gray_tech_3073_tooltip: "£society_research£$building_gray_nano_resident$\n\n$tech_building_gray_nano_resident_effect$"
  ######################## 科技需求与循环科技buff
  gray_tech_require_tech: "需要科技: "
  gray_tech_unlock_building: "§H解锁建筑§!："

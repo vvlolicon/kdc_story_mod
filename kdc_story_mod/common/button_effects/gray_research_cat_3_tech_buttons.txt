@@ -213,6 +213,13 @@ button_tech_building_gray_fortress2 = {
         tech_points = @gray_t3_tech_points
     }
 }
+button_tech_building_gray_nano_resident = {
+    inline_script = {
+        script = "button_effects/gray_research_tech_button"
+        CAT = 2 ID = 3073
+        tech_points = @gray_t2_tech_points
+    }
+}
 
 
 

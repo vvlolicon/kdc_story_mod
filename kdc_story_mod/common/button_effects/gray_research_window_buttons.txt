@@ -63,6 +63,13 @@ icon_ap_graygoo_mega_and_micromechanic_cat_2 = {
 	}}
 	effect = {}
 }
+icon_ap_micromechanic_cat_2 = {
+	potential = { from = { check_variable = { which = gray_research_category_show value = 1 }}}
+	allow = { from = {
+		has_ascension_perk = ap_micromechanical_revolution
+	}}
+	effect = {}
+}
 icon_ap_graygoo_cat_3 = {
 	potential = { from = { check_variable = { which = gray_research_category_show value = 2 }}}
 	allow = { from = { has_ascension_perk = ap_become_the_gray }}

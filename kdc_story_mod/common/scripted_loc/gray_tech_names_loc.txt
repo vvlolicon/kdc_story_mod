@@ -222,6 +222,10 @@ defined_text = {
 	}
 	inline_script = {
 		script = scripted_loc/gray_tech_name
+		ID = 2050 NAME = tech_gray_dark_matter_power_core
+	}
+	inline_script = {
+		script = scripted_loc/gray_tech_name
 		ID = 2051 NAME = tech_gray_weapon_el
 	}
 	inline_script = {
@@ -238,7 +242,7 @@ defined_text = {
 	}
 	inline_script = {
 		script = scripted_loc/gray_tech_name
-		ID = 3000 NAME = tech_psionic_theory
+		ID = 3000 NAME = tech_gray_psionic_theory
 	}
 	inline_script = {
 		script = scripted_loc/gray_tech_name
@@ -343,6 +347,10 @@ defined_text = {
 	inline_script = {
 		script = scripted_loc/gray_tech_name
 		ID = 3072 NAME = tech_building_gray_fortress2
+	}
+	inline_script = {
+		script = scripted_loc/gray_tech_name
+		ID = 3073 NAME = tech_building_gray_nano_resident
 	}
 
 }

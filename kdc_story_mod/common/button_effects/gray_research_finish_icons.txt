@@ -326,6 +326,12 @@ button_tech_nanite_sentry_maingun_finish = {
         CAT = 1 ID = 2044
     }
 }
+button_tech_dark_matter_power_core_finish = {
+    inline_script = {
+        script = "button_effects/gray_research_finish_icon"
+        CAT = 1 ID = 2050
+    }
+}
 button_tech_gray_weapon_el_finish = {
     inline_script = {
         script = "button_effects/gray_research_finish_icon"
@@ -513,5 +519,11 @@ button_tech_building_gray_fortress2_finish = {
     inline_script = {
         script = "button_effects/gray_research_finish_icon"
         CAT = 2 ID = 3072
+    }
+}
+button_tech_building_gray_nano_resident_finish = {
+    inline_script = {
+        script = "button_effects/gray_research_finish_icon"
+        CAT = 2 ID = 3073
     }
 }

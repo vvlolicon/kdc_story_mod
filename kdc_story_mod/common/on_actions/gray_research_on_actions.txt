@@ -58,6 +58,7 @@ on_gray_tech_increased = {
 		gray_tech.2042
 		gray_tech.2043
 		gray_tech.2044
+		gray_tech.2050
 		gray_tech.2051
 		gray_tech.2052
 		gray_tech.2053
@@ -89,6 +90,7 @@ on_gray_tech_increased = {
 		gray_tech.3070
 		gray_tech.3071
 		gray_tech.3072
+		gray_tech.3073
 	}
 }
 
