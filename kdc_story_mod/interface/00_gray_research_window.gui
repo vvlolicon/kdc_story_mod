@@ -1367,7 +1367,7 @@ guiTypes = {
 			effect = "button_tech_nanite_sentry_maingun_finish"
 		}
 		effectButtonType = {
-			name = "icon_tech_dark_matter_power_core"
+			name = "icon_tech_dark_matter_power_core_finish"
 			quadTextureSprite = "GFX_gray_research_icon_finish"
 			orientation = "UPPER_LEFT"
 			position = { x = @tech_icon_c2x6 y = @tech_icon_c2y1 }
