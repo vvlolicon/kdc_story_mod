@@ -516,7 +516,7 @@ gray_tech_2015_prerequisites_trigger = {
     has_technology = tech_gray_nano_reactor
     # custom_tooltip = {
     #     text = require_tech_armor_hardeners_2
-        has_technology = tech_armor_hardeners_2
+        has_technology = tech_armor_hardeners_1
     # }
 }
 has_gray_tech_2015_trigger = {
@@ -527,7 +527,7 @@ gray_tech_2016_prerequisites_trigger = {
     has_technology = tech_gray_nano_reactor
     # custom_tooltip = {
     #     text = require_tech_shield_hardeners_2
-        has_technology = tech_shield_hardeners_2
+        has_technology = tech_shield_hardeners_1
     # }
 }
 has_gray_tech_2016_trigger = {
