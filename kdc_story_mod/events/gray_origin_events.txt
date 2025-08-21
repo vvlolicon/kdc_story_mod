@@ -3914,12 +3914,6 @@ planet_event = {
 		is_planet_class = pc_wg_graygoo
 	}
 
-	immediate = {
-		# 土改纳米球后清空所有地块
-		clear_deposits = yes
-		prevent_anomaly = yes
-	}
-
 	option = {
 		name = EXCELLENT
 		add_modifier = { modifier = gray_arcology_modify_buff years = 5 }

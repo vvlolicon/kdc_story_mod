@@ -39,7 +39,8 @@ create_gray_official = {
 		gender = female
 		immortal = yes
 		event_leader = yes
-		skill = 1
+		randomize_traits = no
+		skill = 10
 		set_age = 0
 		traits = {
 			trait = leader_trait_wg_gray_legend
@@ -68,12 +69,6 @@ create_gray_official = {
 				trait = leader_trait_official_wg_the_loop
 				show_message = no
 			}
-		}
-		if = {
-			limit = { owner = { has_country_flag = origin_gray_country }}
-			add_skill_without_trait_selection = owner.gray_skill
-		} else = {
-			add_skill_without_trait_selection = 10
 		}
 		set_gray_portrait = yes
 	}
@@ -145,7 +140,8 @@ create_gray_warship = {
 		immortal = yes
 		event_leader = yes
 		gender = female
-		skill = 1
+		skill = 10
+		randomize_traits = no
 		set_age = 0
 		traits = {
 			trait = leader_trait_wg_gray_legend
@@ -211,12 +207,6 @@ create_gray_warship = {
 				trait = leader_trait_commander_wg_the_loop
 				show_message = no
 			}
-		}
-		if = {
-			limit = { owner = { has_country_flag = origin_gray_country }}
-			add_skill_without_trait_selection = owner.gray_skill
-		} else = {
-			add_skill_without_trait_selection = 10
 		}
 		set_gray_portrait = yes
 	}

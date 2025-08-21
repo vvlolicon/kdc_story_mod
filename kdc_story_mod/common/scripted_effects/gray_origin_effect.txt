@@ -96,7 +96,7 @@ gray_arcology_get_capital_building_lv_effect = {
 
 gray_arcology_set_capital_lv_effect = {
 	if = {
-		limit = { check_variable = { which = capital_lv value = 3 }}
+		limit = { check_variable = { which = capital_tier value = 4 }}
 		remove_building = building_colony_shelter
 		if = {
 			limit = { owner = { is_machine_empire = yes }}
@@ -123,7 +123,7 @@ gray_arcology_set_capital_lv_effect = {
 		}
 	}
 	else_if = {
-		limit = { check_variable = { which = capital_lv value = 2 }}
+		limit = { check_variable = { which = capital_tier value = 3 }}
 		remove_building = building_colony_shelter
 		if = {
 			limit = { owner = { is_machine_empire = yes }}
@@ -138,8 +138,7 @@ gray_arcology_set_capital_lv_effect = {
 		}
 	}
 	else_if = {
-		limit = { check_variable = { which = capital_lv value = 1 }}
-		set_variable = { which = capital_lv value = 1 }
+		limit = { check_variable = { which = capital_tier value = 2 }}
 		remove_building = building_colony_shelter
 		if = {
 			limit = { owner = { is_machine_empire = yes }}

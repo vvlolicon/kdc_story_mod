@@ -90,165 +90,175 @@ citizenship_assimilation = {
 			fail_text = MUST_NOT_BE_DOMINANT_SPECIES
 			NOT = { is_exact_same_species = from }
 		}
-		custom_tooltip = {
-			fail_text = "pre_sapients_citizenship"
-			is_sapient = yes
-		}
-		custom_tooltip = {
-			fail_text = "WILDERNESS_DEAD_WORLD"
-			if = {
-				limit = { from = { is_wilderness_empire = no } }
-				NOT = { has_trait = trait_wilderness }
-			}
-		}
-		custom_tooltip = {
-			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship_assimilation"
-			if = {
-				limit = { is_lonely_hive_mind_pop = yes }
-				from = {
-					OR = {
-						can_perform_genetic_assimilation = yes
-						has_active_tradition = tr_cybernetics_transubstantiation_synthesis
-						has_active_tradition = tr_cybernetics_assimilator_inevitable_assimilation
-					}
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "disconnected_machine_pops_collapse_citizenship"
-			OR = {
-				from = {
-					has_country_flag = synth_assimilation
-				}
-				is_disconnected_machine_pop = no
-			}
-		}
 		if = {
-			limit = {
-				from = {
-					is_machine_empire = yes
-				}
-			}
-			custom_tooltip = { # machine assimilator
-				fail_text = MACHINE_SPECIES_MUST_BE_ORGANIC
+			limit = { from = { gray_country_trigger = yes }}
+			from = { has_technology = tech_nano_reconstruct }
+
+		}
+		else = {
+			custom_tooltip = {
+				fail_text = "pre_sapients_citizenship"
+				is_sapient = yes
 			}
 			custom_tooltip = {
-				fail_text = requires_tradition_tr_synthetics_adopt
-			}
-		}
-		else_if = {
-			limit = {
-				from = {
-					is_hive_empire = yes
-					is_wilderness_empire = no
-					can_perform_genetic_assimilation = yes
+				fail_text = "WILDERNESS_DEAD_WORLD"
+				if = {
+					limit = { from = { is_wilderness_empire = no } }
+					NOT = { has_trait = trait_wilderness }
 				}
 			}
-			custom_tooltip = { # non-devouring hive mind
-				fail_text = HIVE_SPECIES_MUST_BE_NON_HIVE
-				NOR = {
-					has_trait = trait_hive_mind
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				from = {
-					is_wilderness_empire = yes
-					can_perform_genetic_assimilation = yes
-				}
-			}
-			custom_tooltip = { # non-devouring hive mind
-				fail_text = HIVE_SPECIES_MUST_BE_ORGANIC
-				NOR = {
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-					has_trait = trait_wilderness
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				from = {
-					is_hive_empire = yes
-					has_active_tradition = tr_cybernetics_transubstantiation_synthesis
-				}
-			}
-			custom_tooltip = { # non-devouring hive mind
-				fail_text = HIVE_SPECIES_MUST_BE_NON_HIVE
-				NOR = {
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-					AND = {
-						has_trait = trait_hive_mind
-						has_trait = trait_cybernetic
+			custom_tooltip = {
+				fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship_assimilation"
+				if = {
+					limit = { is_lonely_hive_mind_pop = yes }
+					from = {
+						OR = {
+							can_perform_genetic_assimilation = yes
+							has_active_tradition = tr_cybernetics_transubstantiation_synthesis
+							has_active_tradition = tr_cybernetics_assimilator_inevitable_assimilation
+						}
 					}
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				from = {
-					is_hive_empire = no
-					has_active_tradition = tr_cybernetics_transubstantiation_synthesis
-				}
-			}
-			custom_tooltip = { # cyborg empire
-				fail_text = CYBORG_SPECIES_MUST_BE_ORGANIC
+			custom_tooltip = {
+				fail_text = "disconnected_machine_pops_collapse_citizenship"
 				OR = {
-					AND = {
+					from = {
+						has_country_flag = synth_assimilation
+					}
+					is_disconnected_machine_pop = no
+				}
+			}
+			if = {
+				limit = {
+					from = {
+						is_machine_empire = yes
+					}
+				}
+				custom_tooltip = { # machine assimilator
+					fail_text = MACHINE_SPECIES_MUST_BE_ORGANIC
+				}
+				custom_tooltip = {
+					fail_text = requires_tradition_tr_synthetics_adopt
+				}
+			}
+			else_if = {
+				limit = {
+					from = {
+						is_hive_empire = yes
+						is_wilderness_empire = no
+						can_perform_genetic_assimilation = yes
+					}
+				}
+				custom_tooltip = { # non-devouring hive mind
+					fail_text = HIVE_SPECIES_MUST_BE_NON_HIVE
+					NOR = {
 						has_trait = trait_hive_mind
-						from = {
-							NOT = {
-								is_hive_empire = yes
-							}
-						}
+						has_trait = trait_mechanical
+						has_trait = trait_machine_unit
 					}
-					AND = {
-						NOT = {
-							has_trait = trait_hive_mind
-						}
-						from = {
-							is_hive_empire = yes
-						}
+				}
+			}
+			else_if = {
+				limit = {
+					from = {
+						is_wilderness_empire = yes
+						can_perform_genetic_assimilation = yes
 					}
+				}
+				custom_tooltip = { # non-devouring hive mind
+					fail_text = HIVE_SPECIES_MUST_BE_ORGANIC
 					NOR = {
 						has_trait = trait_mechanical
 						has_trait = trait_machine_unit
-						has_trait = trait_cybernetic
-						has_trait = trait_limited_cybernetic
+						has_trait = trait_wilderness
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					from = {
+						is_hive_empire = yes
+						has_active_tradition = tr_cybernetics_transubstantiation_synthesis
+					}
+				}
+				custom_tooltip = { # non-devouring hive mind
+					fail_text = HIVE_SPECIES_MUST_BE_NON_HIVE
+					NOR = {
+						has_trait = trait_mechanical
+						has_trait = trait_machine_unit
+						AND = {
+							has_trait = trait_hive_mind
+							has_trait = trait_cybernetic
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					from = {
+						is_hive_empire = no
+						has_active_tradition = tr_cybernetics_transubstantiation_synthesis
+					}
+				}
+				custom_tooltip = { # cyborg empire
+					fail_text = CYBORG_SPECIES_MUST_BE_ORGANIC
+					OR = {
+						AND = {
+							has_trait = trait_hive_mind
+							from = {
+								NOT = {
+									is_hive_empire = yes
+								}
+							}
+						}
+						AND = {
+							NOT = {
+								has_trait = trait_hive_mind
+							}
+							from = {
+								is_hive_empire = yes
+							}
+						}
+						NOR = {
+							has_trait = trait_mechanical
+							has_trait = trait_machine_unit
+							has_trait = trait_cybernetic
+							has_trait = trait_limited_cybernetic
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					from = { has_active_tradition = tr_psionics_psionic_assimilation }
+				}
+				custom_tooltip = { # species must be organic to transcend
+					fail_text = TRANSCENDING_SPECIES_MUST_BE_ORGANIC
+					is_robotic_species = no
+				}
+				custom_tooltip = { # species already has psionic trait
+					fail_text = TRANSCENDING_SPECIES_IS_ALREADY_PSIONIC
+					NOT = { has_trait = trait_psionic }
+				}
+				custom_tooltip = { # transcending species cannot be gestalt consciousness
+					fail_text = TRANSCENDING_SPECIES_CANT_BE_HIVE
+					NOT = { has_trait = trait_hive_mind }
+				}
+			}
+			else_if = {
+				limit = {
+					from = { can_perform_genetic_assimilation = yes }
+				}
+				custom_tooltip = {
+					fail_text = CAN_ONLY_ASSIMILATE_HIVES
+					has_trait = trait_hive_mind
+				}
+			}
 		}
-		else_if = {
-			limit = {
-				from = { has_active_tradition = tr_psionics_psionic_assimilation }
-			}
-			custom_tooltip = { # species must be organic to transcend
-				fail_text = TRANSCENDING_SPECIES_MUST_BE_ORGANIC
-				is_robotic_species = no
-			}
-			custom_tooltip = { # species already has psionic trait
-				fail_text = TRANSCENDING_SPECIES_IS_ALREADY_PSIONIC
-				NOT = { has_trait = trait_psionic }
-			}
-			custom_tooltip = { # transcending species cannot be gestalt consciousness
-				fail_text = TRANSCENDING_SPECIES_CANT_BE_HIVE
-				NOT = { has_trait = trait_hive_mind }
-			}
-		}
-		else_if = {
-			limit = {
-				from = { can_perform_genetic_assimilation = yes }
-			}
-			custom_tooltip = {
-				fail_text = CAN_ONLY_ASSIMILATE_HIVES
-				has_trait = trait_hive_mind
-			}
-		}
+
+
+
 	}
 
 	ai_will_do = {
