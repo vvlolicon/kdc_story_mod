@@ -2,9 +2,10 @@
 # ID:科技ID
 # no_prerequisites 填yes即代表没有前置科技条件
 default_gray_tech_button_allow_trigger = {
+    custom_tooltip = gray_tech_$ID$_tooltip
     from = {
         OR = {
-            has_gray_tech_$ID$_trigger = yes
+            hidden_trigger = { has_gray_tech_$ID$_trigger = yes }
             AND = {
                 custom_tooltip = {
                     fail_text = "opened_gray_tech_comfirm_window"
