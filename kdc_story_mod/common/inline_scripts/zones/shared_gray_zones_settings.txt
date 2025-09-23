@@ -10,7 +10,6 @@ potential = { # planet scope
 resources = {
     category = planet_zones
     cost = {
-        minerals = @zone_cost
         nanites = @gray_zone_nanites_cost
     }
 }
