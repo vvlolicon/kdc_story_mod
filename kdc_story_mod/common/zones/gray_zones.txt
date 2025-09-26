@@ -14,6 +14,7 @@ zone_gray_industrial = {
     included_building_sets = {
         industrial
         automation
+        urban_automation
         origin
     }
 
@@ -45,6 +46,7 @@ zone_gray_factory = {
     included_building_sets = {
         industrial
         automation
+        urban_automation
         origin
     }
 
@@ -69,6 +71,7 @@ zone_gray_foundry = {
     included_building_sets = {
         industrial
         automation
+        urban_automation
         origin
     }
 
@@ -94,6 +97,7 @@ zone_gray_research = {
     included_building_sets = {
         research
         automation
+        urban_automation
         origin
     }
 
@@ -119,6 +123,7 @@ zone_gray_unity = {
     included_building_sets = {
         unity
         automation
+        urban_automation
         origin
     }
 
@@ -143,6 +148,7 @@ zone_gray_soldier = {
     included_building_sets = {
         fortress
         automation
+        urban_automation
         origin
     }
 
@@ -209,6 +215,7 @@ zone_gray_nanites = {
         industrial
         automation
         origin
+        urban_automation
     }
 
     planet_modifier = {

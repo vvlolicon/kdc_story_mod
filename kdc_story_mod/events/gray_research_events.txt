@@ -463,7 +463,11 @@ situation_event = {
 			# 将数列中储存的已研究点数变量提取出来
 			# （ARRAY为储存的数列名，VARIABLE为储存的索引（变量），OUT为转存的变量名
 			# 详见scripted_effect 中的array_effects.txt文件里的注释
-			kuat_get_array_variable = { ARRAY = stored_nanotech_time_array VARIABLE = gray_tech_id OUT = stored_gray_research_time }
+			kuat_get_array_variable = {
+				ARRAY = stored_nanotech_time_array
+				VARIABLE = gray_tech_id
+				OUT = stored_gray_research_time
+			}
 		}
 		if = {
 			limit = { owner = { check_variable = { which = stored_gray_research_time value > 0 }}}

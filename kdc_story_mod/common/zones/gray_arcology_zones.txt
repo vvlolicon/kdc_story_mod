@@ -92,6 +92,7 @@ zone_gray_arcology_nanites = {
     }
     included_building_sets = {
         automation
+        mining_automation
     }
     include = {
         building_gray_nanite_mining
