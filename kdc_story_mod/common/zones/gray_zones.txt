@@ -1,5 +1,5 @@
 zone_gray_industrial = {
-    icon = GFX_colony_type_industrial
+    icon = GFX_district_specialization_industrial
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
@@ -32,7 +32,7 @@ zone_gray_industrial = {
     inline_script = zones/gray_zones_housing_modifiers
 }
 zone_gray_factory = {
-    icon = GFX_colony_type_factory
+    icon = GFX_district_specialization_factory
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
@@ -59,7 +59,7 @@ zone_gray_factory = {
     inline_script = zones/gray_zones_housing_modifiers
 }
 zone_gray_foundry = {
-    icon = GFX_colony_type_foundry
+    icon = GFX_district_specialization_foundry
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
@@ -84,7 +84,7 @@ zone_gray_foundry = {
     inline_script = zones/gray_zones_housing_modifiers
 }
 zone_gray_research = {
-    icon = GFX_zone_gray_research
+    icon = GFX_district_specialization_research
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
@@ -110,7 +110,7 @@ zone_gray_research = {
     inline_script = zones/gray_zones_housing_modifiers
 }
 zone_gray_unity = {
-    icon = GFX_colony_type_bureaucratic
+    icon = GFX_district_specialization_priest
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
@@ -136,7 +136,7 @@ zone_gray_unity = {
     inline_script = zones/gray_zones_housing_modifiers
 }
 zone_gray_soldier = {
-    icon = GFX_colony_type_fortress
+    icon = GFX_district_specialization_fortress
     inline_script = zones/shared_gray_zones_settings
 
     unlock = { # planet scope
@@ -161,7 +161,7 @@ zone_gray_soldier = {
     inline_script = zones/gray_zones_housing_modifiers
 }
 zone_gray_nanites = {
-    icon = GFX_resource_sr_nanites_large
+    icon = GFX_district_specialization_industrial
     base_buildtime = @zone_buildtime
 
     potential = { # planet scope

@@ -1,5 +1,5 @@
 zone_gray_arcology_urban_nanites = {
-    icon = GFX_resource_sr_nanites_large
+    icon = GFX_district_specialization_industrial
     base_buildtime = @zone_buildtime
     potential = { # planet scope
         hidden_trigger = { exists = owner }
@@ -48,7 +48,7 @@ zone_gray_arcology_urban_nanites = {
     }
 }
 zone_gray_arcology_nanites = {
-    icon = GFX_resource_sr_nanites_large
+    icon = GFX_district_specialization_industrial
     base_buildtime = @zone_buildtime
 
     potential = { # planet scope
