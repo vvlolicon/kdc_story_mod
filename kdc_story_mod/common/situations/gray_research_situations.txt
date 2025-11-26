@@ -5,7 +5,6 @@ gray_research_situation = {
 	complete_icon_frame = GFX_situation_outcome_frame_blue
 
 	category = positive
-	complete_category = positive
 
 	on_start = {
 		# 循环科技相关的变量（仅用于显示）
@@ -184,7 +183,6 @@ gray_research_situation_days = {
 	complete_icon_frame = GFX_situation_outcome_frame_blue
 
 	category = positive
-	complete_category = positive
 
 	on_start = {
 		# 将数据转移到局势里，避免数据碰撞

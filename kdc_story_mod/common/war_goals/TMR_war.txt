@@ -16,8 +16,8 @@ wg_gray_goo_clear = {
 	}
 
 	forbidden_peace_offers = {
-		demand_surrender = BLANK_STRING
-		surrender = BLANK_STRING
+		demand_surrender = ""
+		surrender = ""
 	}
 
 	potential = {
@@ -48,7 +48,7 @@ wg_end_nanite_crisis = {
 	}
 
 	forbidden_peace_offers = {
-		demand_surrender = BLANK_STRING
-		surrender = BLANK_STRING
+		demand_surrender = ""
+		surrender = ""
 	}
 }

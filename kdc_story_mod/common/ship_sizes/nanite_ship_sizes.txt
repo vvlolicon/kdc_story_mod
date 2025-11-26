@@ -680,7 +680,6 @@ TMR_core = {
 		ship_armor_add = 50000
 		ship_evasion_add = -100
 		ships_upkeep_mult = -1
-		ship_piracy_suppression_add = 4
 	}
 	ship_modifier = {
 		ship_disengage_chance_mult = 0
