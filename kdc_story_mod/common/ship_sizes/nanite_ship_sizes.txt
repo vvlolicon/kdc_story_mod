@@ -12,7 +12,6 @@ origin_interdictor = {
 		ship_evasion_add = 20
 		ships_upkeep_mult = -1
 		ship_weapon_damage = 1
-		ship_piracy_suppression_add = 4
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.5
@@ -140,7 +139,6 @@ nanitecrop_interdictor = {
 		ship_evasion_add = 20
 		ships_upkeep_mult = -1
 		ship_weapon_damage = 1
-		ship_piracy_suppression_add = 4
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.5

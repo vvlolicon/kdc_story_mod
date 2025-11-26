@@ -425,7 +425,7 @@ tech_artificial_zero_point_energy_field = {
 			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 1.0
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -459,7 +459,7 @@ tech_vonneumann_nano_automata = {
 			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 1.0
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -493,7 +493,7 @@ tech_elementary_particle_reconstruction = {
 			has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 1.0
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -527,7 +527,7 @@ tech_nanite_energy_reaction = {
 			has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 1.0
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
